@@ -54,7 +54,7 @@ app.set('trust proxy', 1)
 app.use(session({
     resave: false, 
     saveUninitialized: true, 
-    secret: secret,
+    secret: process.env.SECRET,
     cookie: {
         httpOnly: true,
         secure: false,
