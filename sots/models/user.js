@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-// const passportLocalMongoose = require('passport-local-mongoose');
+const passportLocalMongoose = require('passport-local-mongoose');
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
@@ -26,14 +26,7 @@ const UserSchema = new Schema({
     }
 });
 
-// UserSchema.methods.validPassword = function (password) {
-//     if (password === this.password) {
-//       return true; 
-//     } else {
-//       return false;
-//     }
-//   }
 
-// UserSchema.plugin(passportLocalMongoose, { usernameField: 'email', passwordField: 'password' });
+UserSchema.plugin(passportLocalMongoose, { usernameField: 'email', passwordField: 'password' });
 
 module.exports = mongoose.model('User', UserSchema)
