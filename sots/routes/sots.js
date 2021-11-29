@@ -1,43 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const Report = require('../models/report');
+const sots = require('../controllers/sots');
 
 //routes for rendering static pages
-router.get('/', (req, res) => {
-    res.render('index');
-});
-router.get('/team', (req,res) => {
-    res.render('team');
-});
-router.get('/contact', (req,res) => {
-    res.render('contact');
-});
+router.get('/', sots.renderIndex );
+router.get('/team', sots.renderTeam );
+router.get('/contact', sots.renderContact );
 //route for reaching nelson report page
-router.get('/nelson', (req, res) => {
-    Report.find({}, (err, nelsonReports) => {
-        if(err){
-            console.log(err)
-        } else {
-            res.render('locations/nelson', {reports: nelsonReports})
-        }
-    })
-})
-router.get('/rosland', (req, res) => {
-    Report.find({}, (err, roslandReports) => {
-        if(err){
-            console.log(err)
-        } else {
-            res.render('locations/rosland', {reports: roslandReports})
-        }
-    })
-})
-// router.get('/golden', (req, res) => {
-//     Report.find({}, (err, goldenReports) => {
-//         if(err){
-//             console.log(err)
-//         } else {
-//             res.render('locations/golden', {reports: goldenReports})
-//         }
-//     })
-// })
+router.get('/nelson', sots.renderNelson );
+router.get('/rosland', sots.renderRosland );
+
 module.exports = router;
