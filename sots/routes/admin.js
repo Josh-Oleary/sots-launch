@@ -6,13 +6,15 @@ const multer = require('multer');
 const { storage } = require('../cloudinary');
 const upload = multer({ storage });
 
+
+
 // middleware to check if user is admin
 router.use('/', (req, res, next) => {
     if (req.user && req.user.isAdmin) {
         next();
         return;
     }
-    req.flash('error', 'you are not an admin')
+    req.flash('error', 'You are not an admin!')
     res.redirect('/')
 });
 // routes for the admin section of the site
@@ -47,6 +49,7 @@ router.get('/owner', (req, res) => {
 router.post('/owner', async (req, res) => {
     try{
     const email = req.body.makeAdminEmail;
+    console.log(email);
     const filter = { email: email }
     const update = { isAdmin: true };
     let updatedUser = await User.findOneAndUpdate(filter, update, { new: true});

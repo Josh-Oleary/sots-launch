@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
-const passport = require('passport');
 const isLoggedIn = require('../middleware');
+const bcrypt = require('bcrypt');
+
 
 router.get('/register', (req, res) => {
     res.render('users/register');
@@ -11,14 +12,21 @@ router.get('/register', (req, res) => {
 router.post('/register', async (req, res) => {
     try {
         const { email, password, name } = req.body;
-        const user = new User({ email, password, name });
-        const registeredUser = await User.register(user, password);
+        const hashPass = await bcrypt.hash(password, 10)
+        const user = new User({ 
+            email: email,
+            password: hashPass,
+            name: name,
+        });
+        const registeredUser = await user.save(user);
         req.login(registeredUser, err => {
             if(err) return next(err);
             req.flash('success', 'Welcome to SOTS');
             res.redirect('/');
         })
-    } catch {
+    } catch (e) {
+        console.log(e)
+        req.flash('error', e.message)
         res.redirect('register')
     }
 });
@@ -26,13 +34,26 @@ router.get('/login', (req, res) => {
     res.render('users/login');
 })
 
-//login/logout routes using passport authentication and logout method
-router.post('/login',
-    passport.authenticate('local', { failureRedirect: '/login'}),
-    function(req, res) {
-        console.log('successful login')
-        res.redirect('/')
-    })
+// login/logout routes using bcrypt
+router.post('/login', async (req, res) => {
+    try {
+        const user = await User.findOne({ email: req.body.email })
+        console.log('User: ', user)
+        if(user){
+            const cmp = await bcrypt.compare(req.body.password, user.password);
+            if(cmp){
+                req.login(user, err => {
+                    if(err) return next(err);
+                    req.flash('success', `Welcome back, ${user.name}!`);
+                    res.redirect('/');
+                })
+            }
+        }
+    } catch (e) {
+        console.log('Error: ', e);
+    }
+}
+);
 
 router.get('/logout', (req, res) => {
     req.logout();
