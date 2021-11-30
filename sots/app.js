@@ -13,6 +13,9 @@ const methodOverride = require('method-override');
 const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const MongoStore = require('connect-mongo');
+const nodemailer = require('nodemailer');
+
+
 
 //declaring external route files
 const adminRoutes = require('./routes/admin')
@@ -58,6 +61,8 @@ db.once('open', () => {
 
 const app = express();
 
+
+
 app.use(express.static((path.join(__dirname + '/public'))));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
@@ -87,6 +92,7 @@ app.use((req, res, next) => {
 app.use('/', userRoutes)
 app.use('/', publicRoutes)
 app.use('/admin', adminRoutes)
+
 //security middleware
 app.use(helmet({ 
     crossOriginEmbedderPolicy: true,
@@ -95,6 +101,7 @@ app.use(helmet({
     originAgentCluster: true
 }));
 app.use(mongoSanitize({ replaceWith: '_' }));
+
 
 
 

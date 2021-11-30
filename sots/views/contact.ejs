@@ -7,20 +7,20 @@
         <h2>Get In Touch!</h2>
       </div>
         <div class="page-container">
-            <form  action="">
+            <form  id='contact-form' action="/contact" method='POST' enctype="x-www-form-urlencoded">
                 <div class="contact-form-container row">
                     <div class="top-row">
-                        <input type="text" class="form-control" placeholder="Full Name" aria-label="First name">
+                        <input type="text" name='fullName' class="form-control" placeholder="Full Name" aria-label="First name" required>
                     </div>
                     <div class="top-row">
-                        <input type="email" class="form-control" placeholder="Email Address" aria-label="Last name">
+                        <input type="email" name='email' class="form-control" placeholder="Email Address" aria-label="Email Address" required>
                     </div>
                     <div id="contact-msg" class="input-group">
                         <span class="input-group-text">Message</span>
-                        <textarea class="form-control" aria-label="Message"></textarea>
+                        <input type="text" name='content' class='form-control' required>
                     </div>
                     <div class="contactBtn"> 
-                        <button id="submitBtn" type="button" class="btn btn-secondary btn-lg">Submit</button>
+                        <button id="submitBtn" type="submit" value='submit' class="btn btn-secondary btn-lg">Submit</button>
                     </div>
                 </div>
             </form>
