@@ -3,18 +3,18 @@
 <section id="nelson-hero">
     <div id="nelson-hero-background">
 <%- include('../partials/navbar') %>
-<h1 class='location-header'>Rosland</h1>
+<h1 class='location-header'>Rossland</h1>
 <div class="location-page-container">
     <div>
         <h2 class='sponsor-heading'>Local Partners</h2>
         <div class="sponsor-container">
-            <a class='sponsor-img-link' href="https://skiwhitewater.com/conditions/"><img class='sponsor-img' src="/images/WhiteWaterLogo.jpg" alt=""></a>
-            <a class='sponsor-img-link' href="https://kootenaybackcountryguides.com/avalanche-education"><img class='sponsor-img' src="/images/KBGLogo.jpg" alt=""></a>
-            <a class='sponsor-img-link' href="https://www.theroyalnelson.com/"><img class='sponsor-img' src="/images/RoyalLogo.jpg" alt=""></a>
+            <a class='sponsor-img-link'  href="https://www.bigredcatskiing.com/book-a-trip/avalanche-courses"><img id="red-cat" class='sponsor-img' src="/images/BRC-Skiing.png" alt=""></a>
+            <a class='sponsor-img-link' href="https://www.redresort.com/report"><img class='sponsor-img' src="/images/red-mountain.png" alt=""></a>
+            
         </div>
     </div>
     <div>
-        <h2 class='sponsor-heading'>Today's Report</h2>
+        <h2 class='sponsor-heading'>Most Recent Report</h2>
         <div class="report-container">
             <% reports.forEach(function(report) {%>
             <% if(report.location.toLowerCase() === 'rosland') { %>
@@ -31,4 +31,8 @@
 </div>
     </div>
 </section>
+<p id="liability-waiver">“The information I, Morgan Dinsdale, CAA Active Member &amp; CSGA Level 1 Guide, alongside my
+    team, all CAA Active or Professional Members, present are our own observations to the best of
+    our abilities. These snowpack summaries do not replace actually avalanche training. What you
+    do with the information we present is your responsibility, use it responsibly.”</p>
 <%- include('../partials/footer') %> 

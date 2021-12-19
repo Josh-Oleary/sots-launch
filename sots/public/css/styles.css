@@ -1,15 +1,15 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+	margin: 0;
+	padding: 0;
 }
 
-html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
 }
 /* background image styles */
 #hero {
@@ -38,6 +38,8 @@ html,body
 
 .navbar {
 	justify-content: flex-start;
+	padding-left: 3em;
+	padding-right: 3em;
 }
 
 .navLinks {
@@ -46,7 +48,7 @@ html,body
 }
 nav .navbar-nav li a {
 	color: #ffffffc7 !important;
-  font-size: 20px;
+	font-size: 20px;
 }
 .nav-link {
 	transition: 200ms !important;
@@ -60,20 +62,35 @@ nav .navbar-nav li a {
 }
 /* hero style */
 .hero-header {
-    transform: translateY(7em);
-    
+	display: flex;
+	margin-top: 2em;
+	padding-bottom: 3em !important;
 }
-.hero-header h1 {
+.hero-statement h1 {
 	color: white;
 	font-weight: 600;
 	font-family: 'Jost', sans-serif;
 	text-align: center;
 	letter-spacing: .1em;
 	animation: fadeUp 1s;
+	padding: 0 3em;
+	flex-basis: 50%;
+}
+.home-locations {
+	flex-basis: 50%;
+}
+.home-locations h3, a {
+	text-decoration: none;
+	color: black;
+	text-align: center
 }
 
-
-
+.location-btn {
+	background-color: #99d6cf;
+	width: 5em;
+	border-radius: 5px;
+	margin-left: 1.2em;
+}
 /*mission statement styles*/
 
 .mission-statement-header {
@@ -97,7 +114,8 @@ nav .navbar-nav li a {
 	box-shadow: 0 0 10px;
 }
 
-.mission-statement-card h3,p {
+.mission-statement-card h3,
+p {
 	text-align: center;
 }
 .mission-statement-card h3 {
@@ -161,7 +179,7 @@ nav .navbar-nav li a {
 }
 
 .donation-card button:active {
-	transform: scale(.9)
+	transform: scale(.9);
 }
 
 /* testimonial styles */
@@ -178,13 +196,10 @@ nav .navbar-nav li a {
 }
 .testimonial-quote {
 	font-family: 'Nunito', sans-serif;
-	
 }
 .quote-credit {
 	font-style: italic;
 }
-
-
 
 /*footer styles */
 .footer-logo img {
@@ -213,7 +228,7 @@ footer {
 
 .footer-social-links a:hover {
 	color: black;
-	transform: scale(1.2)
+	transform: scale(1.2);
 }
 
 .footer-social-links a:active {
@@ -244,7 +259,7 @@ footer {
 
 .team-hero-headers {
 	text-align: center;
-	transform: translateY(4em)
+	transform: translateY(4em);
 }
 .team-hero-headers h3 {
 	font-family: 'Jost', sans-serif;
@@ -266,6 +281,7 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	padding: 0 3em;
 }
 .team-card {
 	margin: 1em 0;
@@ -285,7 +301,8 @@ footer {
 	font-family: 'Jost', sans-serif;
 	font-weight: 800;
 }
-.card-text a:hover, a:active {
+.card-text a:hover,
+a:active {
 	text-decoration: underline;
 }
 /* contact page styles */
@@ -326,14 +343,14 @@ textarea {
 	height: 8em;
 }
 #submitBtn {
-    width: 100%;
-    background-color: #99d6cf;
-    transition: 250ms;
-    color: black;
+	width: 100%;
+	background-color: #99d6cf;
+	transition: 250ms;
+	color: black;
 }
 #submitBtn:hover {
-    background-color: #335f78;
-    color: rgba(255, 255, 255, 0.712);
+	background-color: #335f78;
+	color: rgba(255, 255, 255, 0.712);
 }
 /* registration styles */
 #register-form-container {
@@ -353,12 +370,12 @@ textarea {
 	margin-top: 1em;
 	width: 100%;
 	background-color: #99d6cf;
-    transition: 250ms;
-    color: black;
+	transition: 250ms;
+	color: black;
 }
 #register-form button:hover {
-    background-color: #335f78;
-    color: rgba(255, 255, 255, 0.712);
+	background-color: #335f78;
+	color: rgba(255, 255, 255, 0.712);
 }
 #login-form-container {
 	width: 80vw;
@@ -377,12 +394,12 @@ textarea {
 	margin-top: 1em;
 	width: 100%;
 	background-color: #99d6cf;
-    transition: 250ms;
-    color: black;
+	transition: 250ms;
+	color: black;
 }
 #login-form button:hover {
-    background-color: #335f78;
-    color: rgba(255, 255, 255, 0.712);
+	background-color: #335f78;
+	color: rgba(255, 255, 255, 0.712);
 }
 #login-form a {
 	font-size: 15px;
@@ -392,7 +409,8 @@ textarea {
 	text-decoration: none;
 	border: none;
 }
-#login-form a:hover, a:focus {
+#login-form a:hover,
+a:focus {
 	text-decoration: underline;
 }
 
@@ -404,12 +422,12 @@ textarea {
 	-o-background-size: cover;
 	background-size: cover;
 	image-rendering: auto;
-	height: 100vh;
+	height: 60vh;
 	z-index: -1;
 }
 
 #admin-background {
-	height: 100vh;
+	height: 60vh;
 	width: 100vw;
 	background-color: rgba(59, 59, 59, 0.692);
 	/* z-index: -2; */
@@ -438,12 +456,13 @@ textarea {
 	border-radius: 10px;
 	padding: 5px 5px;
 	background-color: #99d6cf;
-    transition: 250ms;
-    color: black;
+	transition: 250ms;
+	color: black;
 	box-shadow: 0 5px 5px;
 	text-align: center;
 }
-.admin-container a:hover, a:active {
+.admin-container a:hover,
+a:active {
 	background-color: #335f78;
 	color: white;
 }
@@ -465,6 +484,24 @@ textarea {
 }
 .location-header {
 	text-align: center;
+	color: #99d6cf;
+}
+.step {
+	width: 50vw;
+	margin: auto;
+}
+
+.step-block {
+	margin-left: 2em;
+}
+.step-block p {
+	text-align: left;
+	font-style: italic;
+}
+.step-block h2 {
+	text-align: center;
+	margin-top: 1em;
+	text-decoration: underline;
 }
 /* nelson page style */
 #nelson-hero {
@@ -474,336 +511,331 @@ textarea {
 	-o-background-size: cover;
 	background-size: cover;
 	image-rendering: auto;
-	height: 150vh;
+	height: 90vh;
 }
 #nelson-hero-background {
-	height: 150vh;
-	background-color: rgba(255, 255, 255, 0.267);
+	height: 90vh;
+	background-color: rgba(29, 29, 29, 0.507);
 	z-index: -1;
 }
+.sponsor-heading {
+	color: #99d6cf;
+}
 /*responsive styling for phone landscape*/
-@media only screen
-	and (min-device-width: 421px)
-	and (max-device-width: 767px) {
-		.hero-header {
-			transform: translateY(2em)
-		}
-		#navLogo {
-			width: 8em;
-		}
-
-		.white-nav {
-			width: 4em;
-		}
-		.mission-statement-container {
-			flex-direction: row;
-			overflow-x: hidden;
-			justify-content: space-between;
-			flex-wrap: wrap;
-		}
-		.third-card {
-			flex-basis: 100%;
-			align-self: center;
-		}
-		.mission-statement-card {
-			flex-basis: 40%;
-		}
-		.donation-card h2 {
-			font-size: 35px;
-		}
-		.donation-card h4 {
-			line-height: 1.2;
-			font-size: 20px;
-		}
-		.team-hero-headers {
-			transform: translateY(-1em);
-		}
-		.team-hero-headers h3 {
-			font-size: 35px;
-		}
-		.team-card img {
-			height: 15em;
-			width: 19em;
-			box-shadow: 0 0 5px;
-		}
-		.team-container {
-			margin-top: 2em;
-		}
-		.card-body h4 {
-			text-align: center;
-		}
-		.page-cta h2 {
-			font-size: 35px;
-			transform: translateY(-1em);
-			margin-bottom: 0;
-		}
-		.page-container {
-			transform: translateY(-2em);
-			margin-top: 0;
-		}
-		.contact-form-container {
-			width: 90vw;
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 1fr 1fr;
-		}
-		.top-row input {
-			width: 100%;
-		}
-		.input-group {
-			width: 100%;
-			transform: translateY(-6em);
-			height: 4em;
-		}
-		#submitBtn {
-			transform: translateY(-4.9em);
-			height: 6.5em;
-		}
-		#login-form-container {
-			transform: translateY(-5em);
-			margin-bottom: 1em;
-		}
-		#register-form-container {
-			transform: translateY(-6em);
-		}
-		#contact-hero, #contact-hero-background {
-			height: 120vh !important;
-		}
-		.location-page-container{
-			display: flex;
-			flex-direction: column;
-		}
-		.sponsor-img {
-			width: 5em !important;
-			height: 5em !important;
-		}
-		.sponsor-img-link {
-			flex-basis: 30% !important;
-			flex-wrap: nowrap !important;
-		}
-		.sponsor-container {
-			justify-content: center !important;
-			width: 100vw !important;
-		}
+@media only screen and (min-device-width: 421px) and (max-device-width: 767px) {
+	.hero-header {
+		transform: translateY(2em);
 	}
-
-/* styling for ipads */
-@media only screen 
-	and (min-width: 768px)
-	and (max-width: 1024px) {
-		.hero-header {
-			transform: translateY(13em);
-		}
-		.hero-header h1 {
-			font-size: 45px;
-		}
-		.mission-statement-header {
-			font-size: 35px;
-		}
-		.mission-statement-card {
-			width: 30vw;
-		}
-		.mission-statement-container {
-			flex-direction: row;
-			padding: 0;
-			margin: 0;
-			width: 100%;
-			justify-content: space-evenly;
-		}
-		#donation {
-			height: 50vh;
-		}
-		#donation-background {
-			height: 50vh;
-		}
-		.testimonial-card {
-			height: 30vh;
-		}
-		.team-hero-headers h3 {
-			transform: translateY(2em);
-			font-size: 45px;
-		}
-		.team h2 {
-			font-size: 35px;
-		}
-		#contact-hero, #contact-hero-background {
-			height: 92vh;
-		}
-		.contact {
-			transform: translateY(6em)
-		}
-		.page-cta h2 {
-			font-size: 65px;
-		}
-		#login-form-container, #register-form-container {
-			transform: translateY(-6em);
-		}
-		.register-page {
-			height: 120vh !important;
-		}
-		.sponsor-img {
-			width: 7em !important;
-			height: 7em !important;
-		}
-		.sponsor-container {
-			display: flex;
-			flex-direction: column;
-		}
-		.sponsor-img-link {
-			flex-basis: 20% !important;
-			width: 8em;
-			margin: auto;
-			margin-top: 4em;
-		}
-		.sponsor-container {
-			justify-content: center !important;
-			width: 30vw !important;
-		}
-	}
-@media only screen 
-	and (min-width: 1024px)
-	and (max-width: 1365px) {
-		#hero {
-			height: 95vh;
-		}
-		#hero-background {
-			height: 95vh;
-		}
-		.hero-header {
-			transform: translateY(8em)
-		}
-		.hero-header h1 {
-			font-size: 55px;
-		}
-		#navLogo {
-			width: 18em;
-		}
-		.mission-statement-header {
-			font-size: 40px;
-		}
-		.mission-statement-card {
-			width: 30vw;
-		}
-		.mission-statement-container {
-			flex-direction: row;
-			padding: 0;
-			margin: 0;
-			width: 100%;
-			justify-content: space-evenly;
-		}
-		.donation-card h4 {
-			line-height: 2;
-			letter-spacing: 1.6;
-			padding: 0 3em;
-		}
-		#testimonial-quote {
-			padding: 0 5em;
-			margin-bottom: 1em;
-			line-height: 2;
-			letter-spacing: 1.4;
-		}
-		.team-hero-headers h3 {
-			font-size: 40px;
-			transform: translateY(-2em)
-		}
-		.contact {
-			transform: translateY(-3em);
-		}
-		#login-form-container {
-			transform: translateY(-4em);
-		}
-		#register-form-container {
-			transform: translateY(-4em);
-			margin-bottom: 2em;
-		}
-		.team-card {
-			flex-basis: 30%;
-		}
-		.contact-form-container {
-			flex-direction: row;
-			justify-content: center;
-		}
-		.top-row {
-			flex-basis: 30%;
-		}
-		#contact-msg {
-			flex-basis: 60%;
-		}
-		#contact-msg textarea, span {
-			height: 100%;
-			transform: translateY(-2em);
-		}
-		.contactBtn {
-			flex-basis: 60%;
-			margin-bottom: 1em;
-			transform: translateY(-1em);
-		}
-		.register-page {
-			height: 100vh !important;
-		}
+	#navLogo {
+		width: 8em;
 		
 	}
-@media only screen 
-	and (min-width: 1366px)
-	and (max-width: 1920px)
-	and (-webkit-min-device-pixel-ratio: 1) {
-		#hero {
-			height: 100vh;
-		}
-		#hero-background {
-			height: 100vh;
-		}
-		#navLogo {
-			width: 18em;
-		}
-		.hero-header {
-			transform: translateY(10em);
-		}
-		.mission-statement-header {
-			font-size: 30px;
-			font-weight: 500;
-		}
-		.mission-statement-card {
-			width: 30vw;
-		}
-		.mission-statement-container {
-			flex-direction: row;
-			padding: 0;
-			margin: 0;
-			width: 100%;
-			justify-content: space-evenly;
-			margin-bottom: 2em;
-		}
-		#testimonial-quote {
-			padding: 0 4em;
-			line-height: 1.5;
-		}
-		#team-hero, #team-hero-background {
-			height: 85vh;
-		}
-		.team-container {
-			flex-direction: row;
-			flex-wrap: wrap;
-			flex-basis: 30%;
-		}
-		.team h2 {
-			font-size: 40px;
-		}
-		.team-card {
-			flex-basis: 30%;
-			margin-bottom: 1em;
-			margin-top: 1em;
-		}
-		.team-card img {
-			width: 100%;
-			height: 19em;
-			box-shadow: 0 0 10px;
-		}
-		.team-card h4 {
-			text-align: center;
-			font-size: 30px;
-		}
+
+	.white-nav {
+		width: 4em;
 	}
+	.mission-statement-container {
+		flex-direction: row;
+		overflow-x: hidden;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.third-card {
+		flex-basis: 100%;
+		align-self: center;
+	}
+	.mission-statement-card {
+		flex-basis: 40%;
+	}
+	.donation-card h2 {
+		font-size: 35px;
+	}
+	.donation-card h4 {
+		line-height: 1.2;
+		font-size: 20px;
+	}
+	.team-hero-headers {
+		transform: translateY(-1em);
+	}
+	.team-hero-headers h3 {
+		font-size: 35px;
+	}
+	.team-card img {
+		height: 15em;
+		width: 19em;
+		box-shadow: 0 0 5px;
+	}
+	.team-container {
+		margin-top: 2em;
+	}
+	.card-body h4 {
+		text-align: center;
+	}
+	.page-cta h2 {
+		font-size: 35px;
+		transform: translateY(-1em);
+		margin-bottom: 0;
+	}
+	.page-container {
+		transform: translateY(-2em);
+		margin-top: 0;
+	}
+	.contact-form-container {
+		width: 90vw;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+	.top-row input {
+		width: 100%;
+	}
+	.input-group {
+		width: 100%;
+		transform: translateY(-6em);
+		height: 4em;
+	}
+	#submitBtn {
+		transform: translateY(-4.9em);
+		height: 6.5em;
+	}
+	#login-form-container {
+		transform: translateY(-5em);
+		margin-bottom: 1em;
+	}
+	#register-form-container {
+		transform: translateY(-6em);
+	}
+	#contact-hero,
+	#contact-hero-background {
+		height: 120vh !important;
+	}
+	.location-page-container {
+		display: flex;
+		flex-direction: column;
+	}
+	.sponsor-img {
+		width: 5em !important;
+		height: 5em !important;
+	}
+	.sponsor-img-link {
+		flex-basis: 30% !important;
+		flex-wrap: nowrap !important;
+	}
+	.sponsor-container {
+		justify-content: center !important;
+		width: 100vw !important;
+	}
+}
+
+/* styling for ipads */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+	.hero-header h1 {
+		font-size: 45px;
+	}
+	.mission-statement-header {
+		font-size: 35px;
+	}
+	.mission-statement-card {
+		width: 30vw;
+	}
+	.mission-statement-container {
+		flex-direction: row;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		justify-content: space-evenly;
+	}
+	#donation {
+		height: 50vh;
+	}
+	#donation-background {
+		height: 50vh;
+	}
+	.testimonial-card {
+		height: 30vh;
+	}
+	.team-hero-headers h3 {
+		transform: translateY(2em);
+		font-size: 45px;
+	}
+	.team h2 {
+		font-size: 35px;
+	}
+	#contact-hero,
+	#contact-hero-background {
+		height: 92vh;
+	}
+	.contact {
+		transform: translateY(6em);
+	}
+	.page-cta h2 {
+		font-size: 65px;
+	}
+	#login-form-container,
+	#register-form-container {
+		transform: translateY(-6em);
+	}
+	.register-page {
+		height: 120vh !important;
+	}
+	.sponsor-img {
+		width: 7em !important;
+		height: 7em !important;
+	}
+	.sponsor-container {
+		display: flex;
+		flex-direction: column;
+	}
+	.sponsor-img-link {
+		flex-basis: 20% !important;
+		width: 8em;
+		margin: auto;
+		margin-top: 4em;
+	}
+	.sponsor-container {
+		justify-content: center !important;
+		width: 30vw !important;
+	}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1365px) {
+	#hero {
+		height: 95vh;
+	}
+	#hero-background {
+		height: 95vh;
+	}
+
+	.hero-header h1 {
+		font-size: 55px;
+	}
+	#navLogo {
+		width: 18em;
+	}
+	.mission-statement-header {
+		font-size: 40px;
+	}
+	.mission-statement-card {
+		width: 30vw;
+	}
+	.mission-statement-container {
+		flex-direction: row;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		justify-content: space-evenly;
+	}
+	.donation-card h4 {
+		line-height: 2;
+		letter-spacing: 1.6;
+		padding: 0 3em;
+	}
+	#testimonial-quote {
+		padding: 0 5em;
+		margin-bottom: 1em;
+		line-height: 2;
+		letter-spacing: 1.4;
+	}
+	.team-hero-headers h3 {
+		font-size: 40px;
+		transform: translateY(-2em);
+	}
+	.contact {
+		transform: translateY(-3em);
+	}
+	#login-form-container {
+		transform: translateY(-4em);
+	}
+	#register-form-container {
+		transform: translateY(-4em);
+		margin-bottom: 2em;
+	}
+	.team-card {
+		flex-basis: 30%;
+	}
+	.contact-form-container {
+		flex-direction: row;
+		justify-content: center;
+	}
+	.top-row {
+		flex-basis: 30%;
+	}
+	#contact-msg {
+		flex-basis: 60%;
+	}
+	#contact-msg textarea,
+	span {
+		height: 100%;
+		transform: translateY(-2em);
+	}
+	.contactBtn {
+		flex-basis: 60%;
+		margin-bottom: 1em;
+		transform: translateY(-1em);
+	}
+	.register-page {
+		height: 100vh !important;
+	}
+}
+@media only screen and (min-width: 1366px) and (max-width: 1920px) and (-webkit-min-device-pixel-ratio: 1) {
+	#hero {
+		height: 100vh;
+	}
+	#hero-background {
+		height: 100vh;
+	}
+	#navLogo {
+		width: 18em;
+	}
+	.hero-header {
+		transform: translateY(10em);
+	}
+	.mission-statement-header {
+		font-size: 30px;
+		font-weight: 500;
+	}
+	.mission-statement-card {
+		width: 30vw;
+	}
+	.mission-statement-container {
+		flex-direction: row;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		justify-content: space-evenly;
+		margin-bottom: 2em;
+	}
+	#testimonial-quote {
+		padding: 0 4em;
+		line-height: 1.5;
+	}
+	#team-hero,
+	#team-hero-background {
+		height: 85vh;
+	}
+	.team-container {
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-basis: 30%;
+	}
+	.team h2 {
+		font-size: 40px;
+	}
+	.team-card {
+		flex-basis: 30%;
+		margin-bottom: 1em;
+		margin-top: 1em;
+	}
+	.team-card img {
+		width: 100%;
+		height: 19em;
+		box-shadow: 0 0 10px;
+	}
+	.team-card h4 {
+		text-align: center;
+		font-size: 30px;
+	}
+}
 /* report pages */
 
 .location-page-container {
@@ -819,11 +851,11 @@ textarea {
 }
 
 .sponsor-img-link {
-	flex-basis: 50%;
+	flex-basis: 30%;
 }
 .sponsor-img {
-	width: 12em;
-	height: 12em;
+	width: 6em;
+	height: 6em;
 	margin: .5em;
 	box-shadow: 0px 0px 10px black;
 	transition: 250ms;
@@ -849,7 +881,8 @@ textarea {
 .report-container video {
 	margin-bottom: 1em;
 }
-.report-location , .report-date {
+.report-location,
+.report-date {
 	text-transform: capitalize;
 	color: black;
 }
@@ -859,10 +892,25 @@ textarea {
 	border: 2px solid black;
 	border-radius: 5px;
 	box-shadow: 0 0 2px;
+	margin-left: 1.5em;
 }
 /*animations*/
 
 @keyframes fadeUp {
-	0% {opacity: 0; transform: translateY(1em);}
-	100% {opacity: 1; transform: translateY()}
+	0% {
+		opacity: 0;
+		transform: translateY(1em);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY();
+	}
+}
+
+#liability-waiver {
+	font-size: x-small;
+}
+
+#red-cat {
+	box-shadow: 0 0 0 ;
 }
