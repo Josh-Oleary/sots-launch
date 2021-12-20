@@ -643,8 +643,9 @@ a:active {
 		flex-wrap: nowrap !important;
 	}
 	.sponsor-container {
-		justify-content: center !important;
 		width: 100vw !important;
+		padding: 2em 0;
+		margin: 0 !important;
 	}
 }
 
