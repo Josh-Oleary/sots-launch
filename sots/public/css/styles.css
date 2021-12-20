@@ -531,7 +531,7 @@ a:active {
 		
 	}
 	.hero-statement h1 {
-		font-size: large;
+		font-size: x-large;
 		line-height: 1.5;
 	}
 	.hero-header {
@@ -540,7 +540,7 @@ a:active {
 		align-items: center;
 	}
 	.home-locations {
-		margin-top: 2em;
+		margin-top: 5em;
 	}
 	.home-locations h2 {
 		color: rgba(255, 255, 255, 0.733);
