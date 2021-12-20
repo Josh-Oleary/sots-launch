@@ -576,7 +576,7 @@ a:active {
 		font-size: 20px;
 	}
 	.team-hero-headers {
-		transform: translateY(-1em);
+		margin-top: 2em;
 	}
 	.team-hero-headers h3 {
 		font-size: 35px;
