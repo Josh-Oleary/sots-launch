@@ -522,7 +522,7 @@ a:active {
 	color: #99d6cf;
 }
 /*responsive styling for phone landscape*/
-@media only screen and (min-device-width: 421px) and (max-device-width: 767px) {
+@media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
 	.hero-header {
 		transform: translateY(2em);
 	}
@@ -530,7 +530,22 @@ a:active {
 		width: 8em;
 		
 	}
-
+	.hero-statement h1 {
+		font-size: large;
+		line-height: 1.5;
+	}
+	.hero-header {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.home-locations {
+		margin-top: 2em;
+	}
+	.home-locations h2 {
+		color: rgba(255, 255, 255, 0.733);
+		text-decoration: underline;
+	}
 	.white-nav {
 		width: 4em;
 	}
@@ -545,9 +560,14 @@ a:active {
 		align-self: center;
 	}
 	.mission-statement-card {
-		flex-basis: 40%;
+		flex-basis: 100%;
+		align-self: center;
+	}
+	.donation-card {
+		padding: 0 1em;
 	}
 	.donation-card h2 {
+		margin-top: 1em;
 		font-size: 35px;
 	}
 	.donation-card h4 {
