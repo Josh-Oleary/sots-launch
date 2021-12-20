@@ -531,8 +531,9 @@ a:active {
 		
 	}
 	.hero-statement h1 {
-		font-size: x-large;
+		font-size: xx-large;
 		line-height: 1.5;
+		font-weight: 700;
 	}
 	.hero-header {
 		flex-direction: column;
@@ -540,7 +541,7 @@ a:active {
 		align-items: center;
 	}
 	.home-locations {
-		margin-top: 5em;
+		margin-top: 1.5em;
 	}
 	.home-locations h2 {
 		color: rgba(255, 255, 255, 0.733);
