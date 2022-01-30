@@ -7,7 +7,7 @@ const admin = require('../controllers/admin')
 
 
 // middleware to check if user is admin
-router.use('/', admin.isAdmin )
+// router.use('/', admin.isAdmin )
 // routes for the admin section of the site
 router.get('/', admin.renderAdmin )
 
