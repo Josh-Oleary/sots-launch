@@ -38,8 +38,13 @@ body {
 
 .navbar {
 	justify-content: flex-start;
-	padding-left: 3em;
-	padding-right: 3em;
+	background-color: #0E232F;
+	padding-top: 0;
+}
+.container-fluid {
+	background-color: #0E232F;
+	width: 100vw;
+
 }
 
 .navLinks {
