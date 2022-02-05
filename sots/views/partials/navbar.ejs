@@ -1,20 +1,23 @@
 <nav class="navbar navbar-expand-lg bg-transparent navbar-light">
     <div class="container-fluid">
-    <a href="/"><img id="navLogo" src="/images/SOS-Full-Color.png" alt=""></a>
+    <a href="/"><img id="navLogo" src="/images/SOS-Full-Color-White 2.png" alt=""></a>
       <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse " id="navbarNavDropdown">
         <ul class="navbar-nav navLinks">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Locations
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Reports
             </a>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="/nelson">Nelson BC</a></li>
+            <!-- <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="/nelson">Nelson</a></li>
               <li><a class="dropdown-item" href="/rosland">Rossland</a></li>
-            </ul>
+            </ul> -->
           </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="https://www.gofundme.com/f/state-of-the-snowpack?qid=76435860f221888b03ae488a637aa6ac">About</a>
+          </li> 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Resources
@@ -28,7 +31,7 @@
               <li><a class="dropdown-item" href="contact">Contact</a></li>
             </ul>
           </li>
-          <% if(!currentUser) { %> 
+          <!-- <% if(!currentUser) { %> 
           <li class="nav-item">
             <a class="nav-link" href="login">Login</a>
           </li>
@@ -36,10 +39,10 @@
             <li class="nav-item">
               <a class="nav-link" href="logout">Logout</a>
             </li>
-          <% } %> 
+          <% } %> --> 
           <li class="nav-item">
-            <a class="nav-link donate-btn" aria-current="page" href="https://www.gofundme.com/f/state-of-the-snowpack?qid=76435860f221888b03ae488a637aa6ac">Donate</a>
-          </li>
+            <a class="nav-link" id="donate-btn" aria-current="page" href="https://www.gofundme.com/f/state-of-the-snowpack?qid=76435860f221888b03ae488a637aa6ac">Donate</a>
+          </li> 
          
         </ul>
       </div>

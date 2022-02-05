@@ -10,6 +10,8 @@ body {
 	margin: 0px;
 	padding: 0px;
 	overflow-x: hidden;
+	background-color: #0E232F;
+	color: white;
 }
 /* background image styles */
 #hero {
@@ -19,8 +21,9 @@ body {
 	-o-background-size: cover;
 	background-size: cover;
 	image-rendering: auto;
-	height: 70vh;
+	height: 50vh;
 	width: 100vw;
+
 }
 #hero-background {
 	height: 70vh;
@@ -31,9 +34,8 @@ body {
 
 /* navbar styles */
 #navLogo {
-	width: 10em;
-	image-rendering: crisp-edges;
-	padding-left: .5em;
+	width: 12em;
+	padding-left: 3em;
 }
 
 .navbar {
@@ -44,12 +46,15 @@ body {
 .container-fluid {
 	background-color: #0E232F;
 	width: 100vw;
-
+	height: 119px;
 }
 
 .navLinks {
 	margin-left: auto;
-	padding-right: 2em;
+	padding-right: 3em;
+	font-family: 'Rubik', sans-serif;
+	display: flex;
+	justify-content: space-around;
 }
 nav .navbar-nav li a {
 	color: #ffffffc7 !important;
@@ -57,29 +62,35 @@ nav .navbar-nav li a {
 }
 .nav-link {
 	transition: 200ms !important;
+	margin-right: 3em;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28.44px;
+	width: 143px;
+	border-bottom: none;
 }
 .nav-link:hover,
-.dropdown-item:hover {
-	color: black !important;
+.dropdown-item:hover, .nav-link:focus, .nav-link:visited {
+	border-bottom: 5px solid #f7941d;
+	width: 143px;
 }
 .nav-link:active {
 	transform: scale(.9) !important;
+	border-bottom: none;
 }
 /* hero style */
-.hero-header {
-	display: flex;
-	margin-top: 2em;
-	padding-bottom: 3em !important;
-}
+
 .hero-statement h1 {
 	color: white;
-	font-weight: 600;
-	font-family: 'Jost', sans-serif;
-	text-align: center;
+	font-weight: 800;
+	font-family: 'Rubik', sans-serif;
+	text-align: left;
+	width: 874px;
 	letter-spacing: .1em;
-	animation: fadeUp 1s;
-	padding: 0 3em;
+	font-size: 72px;
 	flex-basis: 50%;
+	margin-left: 1em;
+	transform: translateY(-1em);
 }
 .home-locations {
 	flex-basis: 50%;
@@ -96,28 +107,54 @@ nav .navbar-nav li a {
 	border-radius: 5px;
 	margin-left: 1.2em;
 }
+#hero-social-links {
+	margin-left: 3em;
+	transform: translateY(-4em);
+	display: flex;
+	align-items: center;
+}
+.hero-social-icons {
+	margin-left: 1.25em;
+}
+#youtube-icon {
+	padding-top: .5em;
+}
+#av-canada {
+	color:#f7941d;
+	text-decoration: underline;
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	margin-left: 3em;
+}
 /*mission statement styles*/
 
 .mission-statement-header {
-	text-align: center;
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 48px;
+	line-height: 57px;
+	margin-left: 1em;
 	margin-top: 1em;
-	font-family: 'Jost', sans-serif;
-	font-weight: 600;
-	font-size: 25px;
 }
 .mission-statement-container {
 	width: 80vw;
 	margin-left: 10vw;
 	display: flex;
-	flex-direction: column;
+	margin-top: 4em;
 }
 .mission-statement-card {
 	margin-top: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-basis: 30%;
+	padding: 0 5em;
 }
-.mission-statement-container img {
-	width: 100%;
-	box-shadow: 0 0 10px;
-}
+
 
 .mission-statement-card h3,
 p {
@@ -129,12 +166,18 @@ p {
 	font-weight: 600;
 }
 .mission-statement-card p {
-	font-family: 'Nunito', sans-serif;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 36px;
+	text-align: center;
+	margin-top: 2em;
 }
 
 /* donate section styles */
 #donation {
-	background: url('/images/soloSkierLeft.jpg') no-repeat center center fixed;
+	background: url('/images/donate-background.png') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -152,7 +195,6 @@ p {
 .donation-card {
 	height: 80%;
 	padding-top: 3em;
-	text-align: center;
 	color: white;
 	display: flex;
 	flex-direction: column;
@@ -163,29 +205,31 @@ p {
 	font-family: 'Jost', sans-serif;
 }
 .donation-card h4 {
-	line-height: 1.4;
-	font-family: 'Nunito', sans-serif;
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 64px;
+	line-height: 76px;
+	width: 15em;
+	margin-top: 1em;
+	margin-left: 1em;
 }
 .donation-card button {
-	width: 8em;
+	width: 89m;
 	height: 3em;
 	background-color: #f7951dde;;
-	font-weight: 700;
 	border-radius: 5px;
-	transition: 200ms;
 	font-family: 'Nunito', sans-serif;
 	align-self: center;
+	color: #0E232F;
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	padding: 0 .5em;
 }
 
-.donation-card button:hover {
-	background-color: #335f78;
-	border: none;
-	color: #ffffffc7;
-}
-
-.donation-card button:active {
-	transform: scale(.9);
-}
 
 /* testimonial styles */
 
@@ -197,48 +241,71 @@ p {
 	padding-top: 3em;
 	padding-left: 1em;
 	padding-right: 1em;
-	margin-bottom: 2em;
+	margin-bottom: 4em;
 }
 .testimonial-quote {
-	font-family: 'Nunito', sans-serif;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 36px;
+	margin: auto;
+	margin-top: 1em;
+	margin-bottom: 4em;
 }
 .quote-credit {
-	font-style: italic;
+	font-style: normal;
+	font-family: Poppins;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 36px;
 }
 
 /*footer styles */
-.footer-logo img {
-	width: 5em;
-	height: 5em;
-	image-rendering: auto;
-}
-footer {
-	position: relative;
-	bottom: 0;
+#footer {
 	display: flex;
+	border-top: 1px solid white;
+	padding-top: 3em;
+}
+
+.footer-text {
+	flex-basis: 30%;
+	margin-right: 10%;
+}
+
+.footer-text p {
+	text-align: left;
+	margin-left: 3em;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 27px;
+	margin-bottom: 3em;
+}
+
+#footer-bottom {
+	padding-bottom: 2em;
+}
+
+#footer-links {
+	display: flex;
+}
+
+#footer-right {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 60%;
+	right: 0;
 	justify-content: space-between;
-	background-color: #99d6cf;
 }
-.footer-social-links {
+#footer-nav {
 	display: flex;
-	margin-right: 1em;
-	width: 8em;
 	justify-content: space-around;
-	align-items: center;
-	opacity: .7;
 }
-.social-icons {
-	width: 2em;
-}
-
-.footer-social-links a:hover {
-	color: black;
-	transform: scale(1.2);
-}
-
-.footer-social-links a:active {
-	color: rgba(0, 0, 0, 0.452);
-	transform: scale(1);
+#footer-links {
+	margin-bottom: 5em;
+	margin-left: 18em;
 }
 
 /* team background image styles */
@@ -749,6 +816,7 @@ a:active {
 		flex-direction: row;
 		padding: 0;
 		margin: 0;
+		margin-bottom: 4em;
 		width: 100%;
 		justify-content: space-evenly;
 	}
@@ -759,7 +827,6 @@ a:active {
 	}
 	#testimonial-quote {
 		padding: 0 5em;
-		margin-bottom: 1em;
 		line-height: 2;
 		letter-spacing: 1.4;
 	}
@@ -806,10 +873,10 @@ a:active {
 }
 @media only screen and (min-width: 1366px) and (max-width: 1920px) and (-webkit-min-device-pixel-ratio: 1) {
 	#hero {
-		height: 100vh;
+		height: 80vh;
 	}
 	#hero-background {
-		height: 100vh;
+		height: 80vh;
 	}
 	#navLogo {
 		width: 18em;
@@ -828,13 +895,23 @@ a:active {
 		flex-direction: row;
 		padding: 0;
 		margin: 0;
+		margin-bottom: 4em;
 		width: 100%;
 		justify-content: space-evenly;
 		margin-bottom: 2em;
+		padding-bottom: 2em;
 	}
 	#testimonial-quote {
-		padding: 0 4em;
-		line-height: 1.5;
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 36px;
+		padding: 0 1em;
+		width: 85%;
+		margin: auto;
+		margin-top: 1em;
+		margin-bottom: 3em;
 	}
 	#team-hero,
 	#team-hero-background {
@@ -914,12 +991,8 @@ a:active {
 	color: black;
 }
 
-.donate-btn {
-	background-color: #f7941d;
-	border: 2px solid black;
-	border-radius: 5px;
-	box-shadow: 0 0 2px;
-	margin-left: 1.5em;
+#donate-btn {
+	color: #f7941d !important;
 }
 /*animations*/
 
