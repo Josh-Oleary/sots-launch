@@ -137,7 +137,7 @@ nav .navbar-nav li a {
 	font-weight: 500;
 	font-size: 48px;
 	line-height: 57px;
-	margin-left: 1em;
+	margin-left: 3em;
 	margin-top: 1em;
 }
 .mission-statement-container {
@@ -175,6 +175,39 @@ p {
 	margin-top: 2em;
 }
 
+/* home video section */
+
+#ig-container {
+	display: flex;
+	flex-direction: column;
+}
+
+#ig-video {
+	width: 88vw;
+	height: 60vh;
+	align-self: center;
+	margin-right: 3em;
+	margin-top: 1em;
+}
+
+#ig-btn {
+	background-color: #99d6cf;
+	color: #0E232F;
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	border-radius: 5px;
+	width: 14em;
+	padding: 1em .1em;
+	align-self: flex-end;
+	margin: 1em 3.5em;
+	margin-bottom: 1.5em;
+}
+
+
+
 /* donate section styles */
 #donation {
 	background: url('/images/donate-background.png') no-repeat center center fixed;
@@ -183,14 +216,14 @@ p {
 	-o-background-size: cover;
 	background-size: cover;
 	image-rendering: auto;
-	height: 60vh;
+	height: 70vh;
 	width: 100vw;
 	margin-top: 1em;
 }
 #donation-background {
-	height: 60vh;
+	height: 70vh;
 	width: 100vw;
-	background-color: rgba(0, 0, 0, 0.541);
+	background-color: rgba(0, 0, 0, 0.356);
 }
 .donation-card {
 	height: 80%;
@@ -228,6 +261,7 @@ p {
 	font-size: 24px;
 	line-height: 28px;
 	padding: 0 .5em;
+	margin-left: 40em;
 }
 
 
