@@ -15,18 +15,18 @@ body {
 }
 /* background image styles */
 #hero {
-	background: url('../images/TouringGlory.jpg') no-repeat center center fixed;
+	background: url('../images/TouringGlory.jpg') no-repeat center center ;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 	image-rendering: auto;
-	height: 50vh;
+	height: 90vh;
 	width: 100vw;
 
 }
 #hero-background {
-	height: 70vh;
+	height: 90vh;
 	width: 100vw;
 	background-color: rgba(0, 0, 0, 0.288);
 	z-index: -1;
@@ -210,7 +210,7 @@ p {
 
 /* donate section styles */
 #donation {
-	background: url('/images/donate-background.png') no-repeat center center fixed;
+	background: url('/images/donate-background.png') no-repeat center center ;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -344,7 +344,7 @@ p {
 
 /* team background image styles */
 #team-hero {
-	background: url('/images/teamBackground.jpg') no-repeat right center fixed;
+	background: url('/images/teamBackground.jpg') no-repeat right center ;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -413,7 +413,7 @@ a:active {
 }
 /* contact page styles */
 #contact-hero {
-	background: url('/images/contactBG.jpg') no-repeat center center fixed;
+	background: url('/images/contactBG.jpg') no-repeat center center ;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -522,7 +522,7 @@ a:focus {
 
 /* admin home styles */
 #admin-hero {
-	background: url('/images/admin-home-bg.jpg') no-repeat center center fixed;
+	background: url('/images/admin-home-bg.jpg') no-repeat center center ;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -589,8 +589,21 @@ a:active {
 	margin-top: 1em;
 }
 .location-header {
-	text-align: center;
-	color: #99d6cf;
+	color: #ffffff;
+	width: 774px;
+	height: .8em;
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 3em;
+	line-height: 85px;
+	margin-left: 1.25em;
+}
+
+#report-spacer {
+	height: 5em;
+	background-color: #0E232F;
+	transform: translateY(-1em);
 }
 .step {
 	width: 50vw;
@@ -611,21 +624,26 @@ a:active {
 }
 /* nelson page style */
 #nelson-hero {
-	background: url('/images/admin-home-bg.jpg') no-repeat center center fixed;
-	-webkit-background-size: cover;
+	background: url('/images/report-background.png') no-repeat center center;
+	/* -webkit-background-size: cover;
 	-moz-background-size: cover;
-	-o-background-size: cover;
+	-o-background-size: cover; */
 	background-size: cover;
 	image-rendering: auto;
 	height: 90vh;
 }
+#nelson-footer-spacer {
+	height: 4em;
+	background-color: #0E232F;
+	width: 100vw;
+}
 #nelson-hero-background {
 	height: 90vh;
-	background-color: rgba(29, 29, 29, 0.507);
+	background-color: rgba(18, 33, 43, 0.8);
 	z-index: -1;
 }
 .sponsor-heading {
-	color: #99d6cf;
+	color: #ffffff;
 }
 /*responsive styling for phone landscape*/
 @media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
@@ -907,16 +925,19 @@ a:active {
 }
 @media only screen and (min-width: 1366px) and (max-width: 1920px) and (-webkit-min-device-pixel-ratio: 1) {
 	#hero {
-		height: 80vh;
+		height: 90vh;
 	}
 	#hero-background {
-		height: 80vh;
+		height: 90vh;
 	}
 	#navLogo {
 		width: 18em;
 	}
 	.hero-header {
 		transform: translateY(10em);
+	}
+	.hero-statement h1 {
+		font-size: 3.8em;
 	}
 	.mission-statement-header {
 		font-size: 30px;
