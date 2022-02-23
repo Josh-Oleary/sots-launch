@@ -3,27 +3,40 @@
 <section id="nelson-hero">
     <div id="nelson-hero-background">
 <%- include('../partials/navbar') %>
-<div id="report-spacer"></div>
-<h1 class='location-header'>Nelson, BC</h1>
-<div class="location-page-container">
-    <div id="report-box">
-        <h2 class='sponsor-heading'>Most Recent Report</h2>
-        <div class="report-container">
-            <!-- <% reports.forEach(function(report) {%>
-            <% if(report.location.toLowerCase() === 'nelson') { %> -->
-                <!-- <video width="320" height="240" controls>
-                    <source src="<%= report.video[0].url %>">
-                </video> -->
-                <iframe id="ig-video" src="/images/ig-placeholder-video.mp4"></iframe>
-                <!-- <div class='report-info'>
-                    <h1 class='report-date'><%= report.date %></h1> 
-                    <h2 class='report-location'><%= report.location %></h2>
-                </div> -->
-            <!-- <% }}); %> -->
+    <div id="report-spacer"></div>
+        <div id="report-static-data">
+            <div class="avy-top-content">
+                <h1 class='location-header'>Nelson, BC</h1>
+                <div class="report-metadata">
+                    <p>Last Updated: 01/13/2022</p>
+                    <p>Posted by Morgan Dinsdale</p>
+                    <a id='past-report-link' href="">Past Reports</a>
+                </div>
+            </div>
+            <div class="static-data-container">
+                <img id='avy-icon' src="/images/safe-icon.png" alt="">
+                <div class="avy-text">
+                    <p>Generally safe avalanche conditions:</p>
+                    <p>Watch for unstable snow.</p>
+                    <a id="av-canada-report" href="https://www.avalanche.ca/map">See Your Region's Live Avalanche Canada Forecast.<img src="/images/link-icon.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="location-page-content">
+            <div class="location-data-tile">
+                <h5>Weather</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut?</p>
+            </div>
+            <div class="location-data-tile">
+                <h5>Snowpack</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut?</p>
+            </div>
+            <div class="location-data-tile">
+                <h5>Avalanche</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut?</p>
+            </div>
         </div>
     </div>
-</div>
-</div>
 </section>
 <div id="nelson-footer-spacer"></div>
 

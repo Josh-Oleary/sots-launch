@@ -596,7 +596,6 @@ a:active {
 	font-style: normal;
 	font-weight: 800;
 	font-size: 3em;
-	line-height: 85px;
 	margin-left: 1.25em;
 }
 
@@ -630,7 +629,7 @@ a:active {
 	-o-background-size: cover; */
 	background-size: cover;
 	image-rendering: auto;
-	height: 90vh;
+	height: 200vh;
 }
 #nelson-footer-spacer {
 	height: 4em;
@@ -638,12 +637,19 @@ a:active {
 	width: 100vw;
 }
 #nelson-hero-background {
-	height: 90vh;
+	height: 200vh;
 	background-color: rgba(18, 33, 43, 0.8);
 	z-index: -1;
 }
 .sponsor-heading {
 	color: #ffffff;
+}
+
+.location-data-tile h5, p {
+	text-align: left;
+	font-family: Poppins;
+	font-weight: 300;
+	line-height: 2em;
 }
 /*responsive styling for phone landscape*/
 @media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
@@ -939,6 +945,7 @@ a:active {
 	.hero-statement h1 {
 		font-size: 3.8em;
 	}
+
 	.mission-statement-header {
 		font-size: 30px;
 		font-weight: 500;
@@ -997,9 +1004,69 @@ a:active {
 }
 /* report pages */
 
+.static-data-container {
+	display: flex;
+}
+#avy-icon {
+	margin-left: 3.8em;
+}
+
+#past-report-link {
+	color: white;
+}
+.avy-text {
+	font-family: Rubik;
+	font-weight: 500;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.avy-text p {
+	margin-left: 3em;
+}
+
+.avy-top-content {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2em;
+}
+.report-metadata {
+	margin-right: 3em;
+	margin-top: .2em;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.report-metadata p {
+	font-family: Rubik;
+	font-weight: 500;
+}
+
+#av-canada-report {
+	color:#f7941d;
+	text-decoration: underline;
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1em;
+	line-height: 2em;
+	margin-left: 3em;
+}
+
+#av-canada-report img {
+	height: 1.5em;
+}
 .location-page-container {
 	display: flex;
 	justify-content: space-around;
+}
+
+.location-page-content {
+	margin-left: 3.8em;
+	margin-right: 3em;
+	margin-top: 2em;
 }
 .sponsor-container {
 	width: 30em;
