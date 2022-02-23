@@ -1063,11 +1063,22 @@ a:active {
 	justify-content: space-around;
 }
 
+#location-video {
+	width: 90%;
+	margin-left: 3.8em;
+	margin-right: 3em;
+	height: 32em;
+}
+
 .location-page-content {
 	margin-left: 3.8em;
 	margin-right: 3em;
 	margin-top: 2em;
 }
+.location-video-container {
+	padding-right: 3em;
+}
+
 .sponsor-container {
 	width: 30em;
 	display: flex;
