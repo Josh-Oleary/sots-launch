@@ -2,19 +2,19 @@
 
 This web application is for the Stat of the Snowpack non-profit orginization. It is a fairly basic CRUD application which allows admins to upload reports consisting of text and a video file.
 
-#Install
+# Install
 
 Clone repository
 
 Run `npm install`
 
-#View Locally
+# View Locally
 
 `cd sots`
 
 `nodemon -e ejs,js,css`
 
-#Development Workflow
+# Development Workflow
 
 The master branch is protected and will require owner approval to merge pull requests
 
