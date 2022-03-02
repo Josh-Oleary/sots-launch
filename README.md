@@ -18,6 +18,8 @@ Run `npm install`
 
 The master branch is protected and will require owner approval to merge pull requests
 
+This project is being worked on constantly by multiple developers, please remember to consistently pull from master
+
 Make a local branch off of master, when you're ready for changes to be viewed, push your branch to staging
 
 Once the changes have been approved, make a PR into master
