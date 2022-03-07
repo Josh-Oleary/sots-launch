@@ -10,12 +10,12 @@ body {
 	margin: 0px;
 	padding: 0px;
 	overflow-x: hidden;
-	background-color: #0E232F;
+	background-color: #0e232f;
 	color: white;
 }
 /* background image styles */
 #hero {
-	background: url('../images/TouringGlory.jpg') no-repeat center center ;
+	background: url("../images/TouringGlory.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -23,7 +23,6 @@ body {
 	image-rendering: auto;
 	height: 90vh;
 	width: 100vw;
-
 }
 #hero-background {
 	height: 90vh;
@@ -40,11 +39,11 @@ body {
 
 .navbar {
 	justify-content: flex-start;
-	background-color: #0E232F;
+	background-color: #0e232f;
 	padding-top: 0;
 }
 .container-fluid {
-	background-color: #0E232F;
+	background-color: #0e232f;
 	width: 100vw;
 	height: 119px;
 }
@@ -52,13 +51,14 @@ body {
 .navLinks {
 	margin-left: auto;
 	padding-right: 3em;
-	font-family: 'Rubik', sans-serif;
+	font-family: "Rubik", sans-serif;
 	display: flex;
 	justify-content: space-around;
 }
 nav .navbar-nav li a {
 	color: #ffffffc7 !important;
 	font-size: 20px;
+	text-decoration: none;
 }
 .nav-link {
 	transition: 200ms !important;
@@ -70,12 +70,14 @@ nav .navbar-nav li a {
 	border-bottom: none;
 }
 .nav-link:hover,
-.dropdown-item:hover, .nav-link:focus, .nav-link:visited {
+.dropdown-item:hover,
+.nav-link:focus,
+.nav-link:visited {
 	border-bottom: 5px solid #f7941d;
 	width: 143px;
 }
 .nav-link:active {
-	transform: scale(.9) !important;
+	transform: scale(0.9) !important;
 	border-bottom: none;
 }
 /* hero style */
@@ -83,10 +85,10 @@ nav .navbar-nav li a {
 .hero-statement h1 {
 	color: white;
 	font-weight: 800;
-	font-family: 'Rubik', sans-serif;
+	font-family: "Rubik", sans-serif;
 	text-align: left;
 	width: 874px;
-	letter-spacing: .1em;
+	letter-spacing: 0.1em;
 	font-size: 72px;
 	flex-basis: 50%;
 	margin-left: 1em;
@@ -95,10 +97,11 @@ nav .navbar-nav li a {
 .home-locations {
 	flex-basis: 50%;
 }
-.home-locations h3, a {
+.home-locations h3,
+a {
 	text-decoration: none;
 	color: black;
-	text-align: center
+	text-align: center;
 }
 
 .location-btn {
@@ -117,10 +120,10 @@ nav .navbar-nav li a {
 	margin-left: 1.25em;
 }
 #youtube-icon {
-	padding-top: .5em;
+	padding-top: 0.5em;
 }
 #av-canada {
-	color:#f7941d;
+	color: #f7941d;
 	text-decoration: underline;
 	font-family: Rubik;
 	font-style: normal;
@@ -155,14 +158,13 @@ nav .navbar-nav li a {
 	padding: 0 5em;
 }
 
-
 .mission-statement-card h3,
 p {
 	text-align: center;
 }
 .mission-statement-card h3 {
 	margin-top: 1em;
-	font-family: 'Jost', sans-serif;
+	font-family: "Jost", sans-serif;
 	font-weight: 600;
 }
 .mission-statement-card p {
@@ -192,7 +194,7 @@ p {
 
 #ig-btn {
 	background-color: #99d6cf;
-	color: #0E232F;
+	color: #0e232f;
 	font-family: Rubik;
 	font-style: normal;
 	font-weight: 500;
@@ -200,17 +202,15 @@ p {
 	line-height: 28px;
 	border-radius: 5px;
 	width: 14em;
-	padding: 1em .1em;
+	padding: 1em 0.1em;
 	align-self: flex-end;
 	margin: 1em 3.5em;
 	margin-bottom: 1.5em;
 }
 
-
-
 /* donate section styles */
 #donation {
-	background: url('/images/donate-background.png') no-repeat center center ;
+	background: url("/images/donate-background.png") no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -235,7 +235,7 @@ p {
 }
 .donation-card h2 {
 	font-size: 40px;
-	font-family: 'Jost', sans-serif;
+	font-family: "Jost", sans-serif;
 }
 .donation-card h4 {
 	font-family: Rubik;
@@ -250,20 +250,19 @@ p {
 .donation-card button {
 	width: 89m;
 	height: 3em;
-	background-color: #f7951dde;;
+	background-color: #f7951dde;
 	border-radius: 5px;
-	font-family: 'Nunito', sans-serif;
+	font-family: "Nunito", sans-serif;
 	align-self: center;
-	color: #0E232F;
+	color: #0e232f;
 	font-family: Rubik;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 24px;
 	line-height: 28px;
-	padding: 0 .5em;
+	padding: 0 0.5em;
 	margin-left: 40em;
 }
-
 
 /* testimonial styles */
 
@@ -345,7 +344,7 @@ p {
 
 /* team background image styles */
 #team-hero {
-	background: url('/images/about-hero.png') no-repeat center;
+	background: url("/images/about-hero.png") no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -383,14 +382,14 @@ p {
 	font-style: normal;
 	font-weight: 800;
 	line-height: 1.5;
-	letter-spacing: .1em;
+	letter-spacing: 0.1em;
 	font-size: 4em;
 }
 
 .team h2 {
 	text-align: center;
 	margin-top: 1em;
-	font-family: 'Jost', sans-serif;
+	font-family: "Jost", sans-serif;
 	font-weight: 600;
 }
 .team-container {
@@ -415,7 +414,7 @@ p {
 .card-text a {
 	text-decoration: none;
 	color: black;
-	font-family: 'Jost', sans-serif;
+	font-family: "Jost", sans-serif;
 	font-weight: 800;
 }
 .card-text a:hover,
@@ -424,7 +423,7 @@ a:active {
 }
 /* contact page styles */
 #contact-hero {
-	background: url('/images/contactBG.jpg') no-repeat center center ;
+	background: url("/images/contactBG.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -533,7 +532,7 @@ a:focus {
 
 /* admin home styles */
 #admin-hero {
-	background: url('/images/admin-home-bg.jpg') no-repeat center center ;
+	background: url("/images/admin-home-bg.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -602,7 +601,7 @@ a:active {
 .location-header {
 	color: #ffffff;
 	width: 774px;
-	height: .8em;
+	height: 0.8em;
 	font-family: Rubik;
 	font-style: normal;
 	font-weight: 800;
@@ -612,7 +611,7 @@ a:active {
 
 #report-spacer {
 	height: 5em;
-	background-color: #0E232F;
+	background-color: #0e232f;
 	transform: translateY(-1em);
 }
 .step {
@@ -634,7 +633,7 @@ a:active {
 }
 /* nelson page style */
 #nelson-hero {
-	background: url('/images/report-background.png') no-repeat center center;
+	background: url("/images/report-background.png") no-repeat center center;
 	/* -webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover; */
@@ -644,7 +643,7 @@ a:active {
 }
 #nelson-footer-spacer {
 	height: 4em;
-	background-color: #0E232F;
+	background-color: #0e232f;
 	width: 100vw;
 }
 #nelson-hero-background {
@@ -656,7 +655,8 @@ a:active {
 	color: #ffffff;
 }
 
-.location-data-tile h5, p {
+.location-data-tile h5,
+p {
 	text-align: left;
 	font-family: Poppins;
 	font-weight: 300;
@@ -669,7 +669,6 @@ a:active {
 	}
 	#navLogo {
 		width: 8em;
-		
 	}
 	.hero-statement h1 {
 		font-size: xx-large;
@@ -792,7 +791,6 @@ a:active {
 
 /* styling for ipads */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-
 	.hero-header h1 {
 		font-size: 45px;
 	}
@@ -993,7 +991,7 @@ a:active {
 	#team-hero-background {
 		background: linear-gradient(109.47deg, rgba(18, 33, 43, 0.7) -4.52%, rgba(18, 33, 43, 0.5) 103.43%);
 	}
-	
+
 	.team-container {
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -1048,7 +1046,7 @@ a:active {
 }
 .report-metadata {
 	margin-right: 3em;
-	margin-top: .2em;
+	margin-top: 0.2em;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
@@ -1060,7 +1058,7 @@ a:active {
 }
 
 #av-canada-report {
-	color:#f7941d;
+	color: #f7941d;
 	text-decoration: underline;
 	font-family: Rubik;
 	font-style: normal;
@@ -1108,7 +1106,7 @@ a:active {
 .sponsor-img {
 	width: 6em;
 	height: 6em;
-	margin: .5em;
+	margin: 0.5em;
 	box-shadow: 0px 0px 10px black;
 	transition: 250ms;
 }
@@ -1160,5 +1158,5 @@ a:active {
 }
 
 #red-cat {
-	box-shadow: 0 0 0 ;
+	box-shadow: 0 0 0;
 }
