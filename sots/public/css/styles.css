@@ -116,7 +116,8 @@ a {
 	display: flex;
 	align-items: center;
 }
-.dropdown-item:focus, .dropdown-item:hover{
+.dropdown-item:focus,
+.dropdown-item:hover {
 	background-color: transparent !important;
 }
 .hero-social-icons {
@@ -341,8 +342,20 @@ p {
 	justify-content: space-around;
 }
 #footer-links {
-	margin-bottom: 5em;
-	margin-left: 18em;
+	/* margin-top: 2em; */
+	margin-left: 13em;
+}
+#footer ul li {
+	list-style: none;
+}
+#footer ul {
+	padding-left: 0px !important;
+}
+.footer-nav-tile h5 {
+	text-decoration: underline;
+}
+#footer-socials {
+	margin-top: 15px;
 }
 
 /* team background image styles */
@@ -395,7 +408,7 @@ p {
 	font-family: "Jost", sans-serif;
 	font-weight: 600;
 }
-.team-heading{
+.team-heading {
 	margin: 40px 40px;
 }
 .team-container {
@@ -414,7 +427,7 @@ p {
 }
 .team-card img {
 	/* flex-basis: 40%; */
-	/* box-shadow: 0 0 6px; */
+	box-shadow: none!important;
 	border: none;
 }
 .card-text a {
@@ -446,6 +459,7 @@ a:active {
 	text-align: center;
 	transform: translateY(4em);
 	color: white;
+	border-radius: 10px;
 }
 .page-cta h2 {
 	font-size: 50px;
@@ -518,6 +532,15 @@ textarea {
 	background-color: #99d6cf;
 	transition: 250ms;
 	color: black;
+}
+.cta-btn {
+	background-color: #99d6cf;
+	color: black;
+	/* width: 50%; */
+	border: none;
+	padding: 13px 25px;
+	font-weight: 700;
+	border-radius: 5px;
 }
 #login-form button:hover {
 	background-color: #335f78;
@@ -730,7 +753,7 @@ p {
 	.team-card img {
 		height: 15em;
 		width: 19em;
-		box-shadow: 0 0 5px;
+		/* box-shadow: 0 0 5px; */
 	}
 	.team-container {
 		margin-top: 2em;
