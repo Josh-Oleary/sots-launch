@@ -116,6 +116,9 @@ a {
 	display: flex;
 	align-items: center;
 }
+.dropdown-item:focus, .dropdown-item:hover{
+	background-color: transparent !important;
+}
 .hero-social-icons {
 	margin-left: 1.25em;
 }
@@ -369,7 +372,7 @@ p {
 	width: 65%;
 	font-size: 1.4em;
 	line-height: 1.5em;
-	margin: auto;
+	margin: 15px auto;
 }
 
 .team-hero-headers {
@@ -392,6 +395,9 @@ p {
 	font-family: "Jost", sans-serif;
 	font-weight: 600;
 }
+.team-heading{
+	margin: 40px 40px;
+}
 .team-container {
 	margin-top: 1em;
 	display: flex;
@@ -400,15 +406,15 @@ p {
 	padding: 0 3em;
 }
 .team-card {
-	margin: 1em 0;
+	/* margin: 5em 0; */
 	flex-basis: 90%;
 }
 .team-card h4 {
 	text-align: center;
 }
 .team-card img {
-	flex-basis: 40%;
-	box-shadow: 0 0 6px;
+	/* flex-basis: 40%; */
+	/* box-shadow: 0 0 6px; */
 	border: none;
 }
 .card-text a {
