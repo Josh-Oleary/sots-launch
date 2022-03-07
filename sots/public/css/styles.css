@@ -427,7 +427,7 @@ p {
 }
 .team-card img {
 	/* flex-basis: 40%; */
-	box-shadow: none!important;
+	box-shadow: none !important;
 	border: none;
 }
 .card-text a {
@@ -442,17 +442,18 @@ a:active {
 }
 /* contact page styles */
 #contact-hero {
-	background: url("/images/contactBG.jpg") no-repeat center center;
+	/* background: url("/images/contactBG.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	image-rendering: auto;
-	height: 90vh;
+	image-rendering: auto; */
+	background-color: #12212b;
+	height: 130vh;
 }
 #contact-hero-background {
 	height: 90vh;
-	background-color: rgba(0, 0, 0, 0.329);
+	/* background-color: rgba(0, 0, 0, 0.329); */
 	z-index: -1;
 }
 .page-cta {
@@ -493,25 +494,28 @@ textarea {
 	width: 80vw;
 	margin: auto;
 	margin-top: 0;
+	color: #fff;
 }
 #register-form {
 	width: 60vw;
-	background-color: rgba(71, 71, 71, 0.699);
+	/* background-color: rgba(71, 71, 71, 0.699); */
 	padding: 1em;
 	padding-bottom: 1em;
 	border-radius: 15px;
-	color: rgba(255, 255, 255, 0.712);
+	color: #fff;
+	font-weight: 700;
 }
 #register-form button {
 	margin-top: 1em;
-	width: 100%;
+	width: 24%;
 	background-color: #99d6cf;
 	transition: 250ms;
 	color: black;
+	font-weight: 700;
 }
 #register-form button:hover {
-	background-color: #335f78;
-	color: rgba(255, 255, 255, 0.712);
+	background-color: #12212b;
+	color: #fff;
 }
 #login-form-container {
 	width: 80vw;
@@ -520,18 +524,20 @@ textarea {
 }
 #login-form {
 	width: 60vw;
-	background-color: rgba(71, 71, 71, 0.699);
+	/* background-color: rgba(71, 71, 71, 0.699); */
 	padding: 1em;
 	padding-bottom: 1em;
 	border-radius: 15px;
-	color: rgba(255, 255, 255, 0.712);
+	color: #fff;
+	font-weight: 700;
 }
 #login-form button {
 	margin-top: 1em;
-	width: 100%;
+	width: 25%;
 	background-color: #99d6cf;
 	transition: 250ms;
 	color: black;
+	font-weight: 700;
 }
 .cta-btn {
 	background-color: #99d6cf;
@@ -543,15 +549,15 @@ textarea {
 	border-radius: 5px;
 }
 #login-form button:hover {
-	background-color: #335f78;
-	color: rgba(255, 255, 255, 0.712);
+	background-color: #12212b;
+	color: #fff;
 }
 #login-form a {
 	font-size: 15px;
 	margin-top: 1em;
-	margin-left: 1.2em;
+	/* margin-left: 1.2em; */
 	color: #f7951dde;
-	text-decoration: none;
+	text-decoration: underline;
 	border: none;
 }
 #login-form a:hover,
