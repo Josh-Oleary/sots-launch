@@ -30,6 +30,9 @@ module.exports.registerUser = async (req, res) => {
 module.exports.renderLogin = (req, res) => {
   res.render('users/login');
 };
+module.exports.renderResetPassword = (req, res) => {
+  res.render('users/forgot-password');
+};
 
 module.exports.loginUser = async (req, res) => {
   try {
