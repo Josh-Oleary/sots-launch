@@ -10,6 +10,11 @@ router.route('/login')
     .get(users.renderLogin)
     .post(users.loginUser)
 
+router.route('/forgot-password')
+    .get(users.renderResetPassword)
+    // .post(users.loginUser)
+
+
 router.route('/logout')
     .get(users.logout)
 

@@ -112,7 +112,7 @@ a {
 }
 #hero-social-links {
 	margin-left: 3em;
-	transform: translateY(-4em);
+	transform: translateY(-2em);
 	display: flex;
 	align-items: center;
 }
@@ -252,8 +252,10 @@ p {
 	margin-left: 1em;
 }
 .donation-card button {
-	width: 89m;
+	/* width: 89m; */
+	padding: 13px;
 	height: 3em;
+	border: none;
 	background-color: #f7951dde;
 	border-radius: 5px;
 	font-family: "Nunito", sans-serif;
@@ -264,7 +266,7 @@ p {
 	font-weight: 500;
 	font-size: 24px;
 	line-height: 28px;
-	padding: 0 0.5em;
+	/* padding: 0 0.5em; */
 	margin-left: 40em;
 }
 
@@ -288,14 +290,14 @@ p {
 	line-height: 36px;
 	margin: auto;
 	margin-top: 1em;
-	margin-bottom: 4em;
+	/* margin-bottom: 4em; */
 }
 .quote-credit {
 	font-style: normal;
 	font-family: Poppins;
-	font-weight: 300;
+	font-weight: normal;
 	font-size: 24px;
-	line-height: 36px;
+	/* line-height: 36px; */
 	text-align: center;
 }
 
@@ -427,7 +429,7 @@ p {
 }
 .team-card img {
 	/* flex-basis: 40%; */
-	box-shadow: none!important;
+	box-shadow: none !important;
 	border: none;
 }
 .card-text a {
@@ -442,17 +444,18 @@ a:active {
 }
 /* contact page styles */
 #contact-hero {
-	background: url("/images/contactBG.jpg") no-repeat center center;
+	/* background: url("/images/contactBG.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	image-rendering: auto;
-	height: 90vh;
+	image-rendering: auto; */
+	background-color: #12212b;
+	height: 130vh;
 }
 #contact-hero-background {
 	height: 90vh;
-	background-color: rgba(0, 0, 0, 0.329);
+	/* background-color: rgba(0, 0, 0, 0.329); */
 	z-index: -1;
 }
 .page-cta {
@@ -493,25 +496,28 @@ textarea {
 	width: 80vw;
 	margin: auto;
 	margin-top: 0;
+	color: #fff;
 }
 #register-form {
 	width: 60vw;
-	background-color: rgba(71, 71, 71, 0.699);
+	/* background-color: rgba(71, 71, 71, 0.699); */
 	padding: 1em;
 	padding-bottom: 1em;
 	border-radius: 15px;
-	color: rgba(255, 255, 255, 0.712);
+	color: #fff;
+	font-weight: 700;
 }
 #register-form button {
 	margin-top: 1em;
-	width: 100%;
+	width: 24%;
 	background-color: #99d6cf;
 	transition: 250ms;
 	color: black;
+	font-weight: 700;
 }
 #register-form button:hover {
-	background-color: #335f78;
-	color: rgba(255, 255, 255, 0.712);
+	background-color: #12212b;
+	color: #fff;
 }
 #login-form-container {
 	width: 80vw;
@@ -520,18 +526,20 @@ textarea {
 }
 #login-form {
 	width: 60vw;
-	background-color: rgba(71, 71, 71, 0.699);
+	/* background-color: rgba(71, 71, 71, 0.699); */
 	padding: 1em;
 	padding-bottom: 1em;
 	border-radius: 15px;
-	color: rgba(255, 255, 255, 0.712);
+	color: #fff;
+	font-weight: 700;
 }
 #login-form button {
 	margin-top: 1em;
-	width: 100%;
+	width: 25%;
 	background-color: #99d6cf;
 	transition: 250ms;
 	color: black;
+	font-weight: 700;
 }
 .cta-btn {
 	background-color: #99d6cf;
@@ -543,15 +551,15 @@ textarea {
 	border-radius: 5px;
 }
 #login-form button:hover {
-	background-color: #335f78;
-	color: rgba(255, 255, 255, 0.712);
+	background-color: #12212b;
+	color: #fff;
 }
 #login-form a {
 	font-size: 15px;
 	margin-top: 1em;
-	margin-left: 1.2em;
+	/* margin-left: 1.2em; */
 	color: #f7951dde;
-	text-decoration: none;
+	text-decoration: underline;
 	border: none;
 }
 #login-form a:hover,
@@ -694,15 +702,57 @@ p {
 /*responsive styling for phone landscape*/
 @media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
 	.hero-header {
-		transform: translateY(2em);
+		transform: translateY(10em);
+	}
+	.container-fluid {
+		height: 80px;
+		position: fixed;
+		top: 0;
+		z-index: 10;
 	}
 	#navLogo {
 		width: 8em;
+		padding: 0px;
+	}
+	#hero {
+		height: 70vh;
+	}
+	#av-canada {
+		font-size: 18px;
+		margin-left: 30px;
+		/* margin-right: 10em; */
+		width: 90%;
+		display: flex;
+		text-align: left;
+	}
+	#av-canada img {
+		display: none;
+	}
+	#hero-background {
+		height: 70vh;
+	}
+	#hero-social-links {
+		margin-left: 0px;
 	}
 	.hero-statement h1 {
-		font-size: xx-large;
+		/* font-size: xx-large; */
+		font-size: 33px;
 		line-height: 1.5;
-		font-weight: 700;
+		font-weight: 900;
+		width: 90%;
+		font-family: "Rubik";
+	}
+	#ig-video {
+		margin-right: 0px;
+	}
+	#ig-btn {
+		margin: 10px auto;
+		font-size: 20px;
+		width: auto;
+		padding: 15px;
+	}
+	#ig-container h3 {
+		text-align: center;
 	}
 	.hero-header {
 		flex-direction: column;
@@ -719,11 +769,18 @@ p {
 	.white-nav {
 		width: 4em;
 	}
+	.mission-statement-header {
+		margin-left: 15px;
+		font-size: 30px;
+	}
 	.mission-statement-container {
 		flex-direction: row;
 		overflow-x: hidden;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		margin-left: 0px;
+		width: 100%;
+		margin-top: 0px;
 	}
 	.third-card {
 		flex-basis: 100%;
@@ -732,9 +789,26 @@ p {
 	.mission-statement-card {
 		flex-basis: 100%;
 		align-self: center;
+		padding: 35px;
+		margin-top: 0px;
+	}
+	.mission-statement-card img {
+		width: 50%;
+		margin: 10px auto;
+	}
+	.mission-statement-card p {
+		font-size: 15px;
+		line-height: 20px;
+	}
+	#donation {
+		height: 40vh;
+		margin: 50px 0px;
+	}
+	#donation-background {
+		height: 40vh;
 	}
 	.donation-card {
-		padding: 0 1em;
+		/* padding: 0 1em; */
 	}
 	.donation-card h2 {
 		margin-top: 1em;
@@ -742,10 +816,54 @@ p {
 	}
 	.donation-card h4 {
 		line-height: 1.2;
+		font-size: 30px;
+		width: 80%;
+		margin: 30px;
+	}
+	.donation-card button {
+		margin: 10px;
 		font-size: 20px;
 	}
 	.team-hero-headers {
 		margin-top: 2em;
+	}
+	.testimonial-card {
+		height: auto;
+		padding: 20px;
+		margin-bottom: 0px;
+	}
+	#testimonial-quote {
+		text-align: center;
+		font-size: 15px;
+		font-weight: 700;
+	}
+	.quote-credit {
+		font-size: 16px;
+	}
+	#footer {
+		flex-direction: column;
+		border-top: none;
+	}
+	.footer-text p {
+		font-size: 15px;
+		margin-left: 2em;
+	}
+	#footer-bottom {
+		display: none;
+	}
+	#footer-nav {
+		display: none;
+	}
+	#footer-links {
+		margin-left: 0px;
+		flex-direction: column-reverse;
+	}
+	#footer-links img {
+		width: 60%;
+		margin-left: 32px;
+	}
+	#footer-socials img {
+		width: 40px;
 	}
 	.team-hero-headers h3 {
 		font-size: 35px;
@@ -969,16 +1087,16 @@ p {
 }
 @media only screen and (min-width: 1366px) and (max-width: 1920px) and (-webkit-min-device-pixel-ratio: 1) {
 	#hero {
-		height: 90vh;
+		height: 100vh;
 	}
 	#hero-background {
-		height: 90vh;
+		height: 100vh;
 	}
 	#navLogo {
 		width: 18em;
 	}
 	.hero-header {
-		transform: translateY(10em);
+		transform: translateY(5em);
 	}
 	.hero-statement h1 {
 		font-size: 3.8em;
