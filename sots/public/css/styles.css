@@ -28,7 +28,7 @@ body {
 	height: 90vh;
 	width: 100vw;
 	background-color: rgba(0, 0, 0, 0.288);
-	z-index: -1;
+	/* z-index: -1; */
 }
 
 /* navbar styles */
@@ -1041,10 +1041,12 @@ p {
 }
 @media only screen and (min-width: 1024px) and (max-width: 1365px) {
 	#hero {
-		height: 95vh;
-	}
+		height: 90vh;
+    background-color: rgba(0, 0, 0, 0.288);
+  }
 	#hero-background {
-		height: 95vh;
+		height: 90vh;
+   
 	}
 
 	.hero-header h1 {
@@ -1120,10 +1122,11 @@ p {
 }
 @media only screen and (min-width: 1366px) and (max-width: 1920px) and (-webkit-min-device-pixel-ratio: 1) {
 	#hero {
-		height: 100vh;
+		height: 90vh;
 	}
 	#hero-background {
-		height: 100vh;
+		height: 90vh;
+    background-color: ;
 	}
 	#navLogo {
 		width: 18em;
