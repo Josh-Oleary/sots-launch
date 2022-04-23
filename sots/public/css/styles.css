@@ -416,14 +416,16 @@ p {
 .team-container {
 	margin-top: 1em;
 	display: flex;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 	justify-content: space-around;
 	padding: 0 3em;
+	//overflow-x: scroll;
 }
 .team-card {
 	/* margin: 5em 0; */
 	flex-basis: 90%;
 }
+
 
 .team-card h4 {
 	text-align: center;
@@ -432,6 +434,10 @@ p {
 	/* flex-basis: 40%; */
 	box-shadow: none !important;
 	border: none;
+}
+
+.card-img-top{
+	height: 75% !important;
 }
 .card-text a {
 	text-decoration: none;
