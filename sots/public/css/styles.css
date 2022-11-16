@@ -708,6 +708,46 @@ p {
 }
 /*responsive styling for phone landscape*/
 @media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
+	.avy-top-content {
+		display: flex;
+		flex-direction: column;
+	}
+	.mobile-menu-links {
+		color: white !important;
+		font-size: 1em !important;
+		font-weight: 300;
+	}
+	.location-header {
+		height: 1em;
+		margin-left: .75em !important;
+	}
+	.report-metadata {
+		align-items: flex-start !important;
+		margin-left: 2.5em;
+	}
+	#avy-icon {
+		height: 5em;
+		margin-top: 2em;
+		margin-left: 2.45em !important;
+	}
+	#nelson-hero, #rosland-hero {
+		height: 140vh !important;
+	}
+	.avy-text {
+		font-size: .8em !important;
+		margin-top: 2em;
+	}
+	#av-canada-report {
+		font-size: .7em !important;
+		margin-left: 3em !important;
+	}
+	.location-page-content {
+		margin-left: 2.5em !important;
+	}
+	#location-video {
+		margin-left: 2.25em !important;
+		height: 17em !important;
+	}
 	.hero-header {
 		transform: translateY(10em);
 	}

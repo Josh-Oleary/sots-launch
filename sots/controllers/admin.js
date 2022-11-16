@@ -13,11 +13,13 @@ module.exports.renderAddReport = (req, res) => {
 };
 
 module.exports.addReport =  async (req,res) => {
+  console.log('REQ USER: ', req.user)
   try {
-      const { date, location } = req.body;
-      const report = new Report({ date, location });
+      const { date, location, weatherSummary, snowpackSummary, avalancheSummary } = req.body;
+      const report = new Report({ date, location, weatherSummary, snowpackSummary, avalancheSummary });
       report.video = req.files.map(f => ({url: f.path, filename: f.filename}));
-      report.author = req.user._id;
+      console.log(req.user)
+      // report.author = req.user._id;
       console.log(report);
       await report.save((err, doc) => {
           if(err) console.log(err);

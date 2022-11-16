@@ -18,7 +18,20 @@ const ReportSchema = new Schema({
 	],
 	author: {
   		type: Schema.Types.ObjectId,
-  		ref: 'User'}
+  		ref: 'User'
+	},
+	weatherSummary: {
+		type: String,
+		required: false
+	},
+	snowpackSummary: {
+		type: String,
+		required: false
+	},
+	avalancheSummary: {
+		type: String,
+		required: false
+	}
 });
 
 module.exports = mongoose.model('Report', ReportSchema)
