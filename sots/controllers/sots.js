@@ -31,21 +31,22 @@ module.exports.sendEmail = (req, res) => {
 }
 
 module.exports.renderNelson = (req, res) => {
-  Report.find({}, (err, nelsonReports) => {
+  Report.find({ location: /nelson/i}, (err, nelsonReports) => {
       if(err){
           console.log(err)
       } else {
-          res.render('locations/nelson', {reports: nelsonReports})
+        console.log(nelsonReports)
+          res.render('locations/nelson', {reports: nelsonReports.reverse()})
       }
   })
 }
 
 module.exports.renderRosland = (req, res) => {
-  Report.find({}, (err, roslandReports) => {
+  Report.find({ location: /rosland/i}, (err, roslandReports) => {
       if(err){
           console.log(err)
       } else {
-          res.render('locations/rosland', {reports: roslandReports})
+          res.render('locations/nelson', {reports: roslandReports.reverse()})
       }
   })
 }

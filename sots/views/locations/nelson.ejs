@@ -6,11 +6,16 @@
     <div id="report-spacer"></div>
         <div id="report-static-data">
             <div class="avy-top-content">
-                <h1 class='location-header'>Nelson, BC</h1>
+                <h1 id="location-h1" class='location-header'><%= reports[0].location %>, BC</h1>
                 <div class="report-metadata">
-                    <p>Last Updated: 01/13/2022</p>
-                    <p>Posted by Morgan Dinsdale</p>
-                    <a id='past-report-link' href="">Past Reports</a>
+                    <p>Last Updated: <%= reports[0].date %></p>
+                    <!-- <p>Posted by: <%= reports[0].author %></p> -->
+                    <label id='past-report-link' for='pastReport' href="">Past Reports</label>
+                    <select name="pastReport">
+                        <% for (let r in reports) { %>
+                            <option value="<%= r %>"><%= reports[r].date %></option>
+                        <% } %>
+                    </select>
                 </div>
             </div>
             <div class="static-data-container">
@@ -25,23 +30,34 @@
         <div class="location-page-content">
             <div class="location-data-tile">
                 <h5>Weather</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut?</p>
+                <p><%= reports[0].weatherSummary %></p>
             </div>
             <div class="location-data-tile">
                 <h5>Snowpack</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut?</p>
+                <p><%= reports[0].snowpackSummary %></p>
             </div>
             <div class="location-data-tile">
                 <h5>Avalanche</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora in soluta aliquam sed! Tempore perferendis perspiciatis quaerat recusandae cumque natus odit excepturi quisquam quia omnis, odio, dolores earum ea ut?</p>
+                <p><%= reports[0].avalancheSummary %></p>
             </div>
         </div>
         <div class="location-video-container">
-            <iframe id="location-video" src="/images/ig-placeholder-video.mp4"></iframe>
+            <video id="location-video" src="<%= reports[0].video[0].url %>"></v>
+            <!-- <video id="location-video" src="https://res.cloudinary.com/ddfdmqleo/video/upload/v1668533466/SOTS-Reports/bklgngumy5cc8hbseff2.mov"></video> -->
         </div>
     </div>
 </section>
 <div id="nelson-footer-spacer"></div>
 
 </section>
+
 <%- include('../partials/footer') %> 
+
+<script>
+
+    const locationHeader = document.querySelector('#location-h1')
+    let header = locationHeader.innerText
+    console.log(header)
+    locationHeader.innerText = header.charAt(0).toUpperCase() + header.slice(1)
+
+</script>
