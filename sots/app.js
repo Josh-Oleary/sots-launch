@@ -23,7 +23,7 @@ const adminRoutes = require('./routes/admin')
 const userRoutes = require('./routes/users');
 const publicRoutes = require('./routes/sots')
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 // const mongoURI = process.env.MONGOURI || 'mongodb://127.0.0.1:27017/sots';
 const mongoURI = process.env.MONGO_URL;
 const secret = process.env.SECRET || 'secret';
@@ -107,6 +107,6 @@ app.use(mongoSanitize({ replaceWith: '_' }));
 
 
 
-app.listen(process.env.PORT, function () {
-    console.log('Express started on' + process.env.PORT+ 'press Ctrl-C to terminate.');
+app.listen(port, function () {
+    console.log('Express started on' + port+ 'press Ctrl-C to terminate.');
 });
