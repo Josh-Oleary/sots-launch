@@ -15,7 +15,8 @@ const mongoSanitize = require('express-mongo-sanitize');
 const MongoStore = require('connect-mongo');
 const nodemailer = require('nodemailer');
 
-
+//"mongodb+srv://sotsAdmin:<password>@cluster0.b8xjv.mongodb.net/?retryWrites=true&w=majority"
+//"mongodb+srv://sotsAdmin:stateofthesnowpack@cluster0.b8xjv.mongodb.net/?retryWrites=true&w=majority"
 
 //declaring external route files
 const adminRoutes = require('./routes/admin')
@@ -23,7 +24,8 @@ const userRoutes = require('./routes/users');
 const publicRoutes = require('./routes/sots')
 
 const port = process.env.PORT || 3000;
-const mongoURI = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/sots';
+// const mongoURI = process.env.MONGOURI || 'mongodb://127.0.0.1:27017/sots';
+const mongoURI = "mongodb+srv://sotsAdmin:stateofthesnowpack@cluster0.b8xjv.mongodb.net/?retryWrites=true&w=majority";
 const secret = process.env.SECRET || 'secret';
 
 mongoose.connect( mongoURI, {
