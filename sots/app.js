@@ -23,9 +23,9 @@ const adminRoutes = require('./routes/admin')
 const userRoutes = require('./routes/users');
 const publicRoutes = require('./routes/sots')
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 // const mongoURI = process.env.MONGOURI || 'mongodb://127.0.0.1:27017/sots';
-const mongoURI = "mongodb+srv://sotsAdmin:stateofthesnowpack@cluster0.b8xjv.mongodb.net/?retryWrites=true&w=majority";
+const mongoURI = process.env.MONGO_URL;
 const secret = process.env.SECRET || 'secret';
 
 mongoose.connect( mongoURI, {
@@ -108,5 +108,5 @@ app.use(mongoSanitize({ replaceWith: '_' }));
 
 
 app.listen(process.env.PORT, function () {
-    console.log('Express started on http://localhost:' + 8080 + '; press Ctrl-C to terminate.');
+    console.log('Express started on' + process.env.PORT+ 'press Ctrl-C to terminate.');
 });
