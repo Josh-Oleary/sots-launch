@@ -107,6 +107,6 @@ app.use(mongoSanitize({ replaceWith: '_' }));
 
 
 
-app.listen(8080, function () {
+app.listen(process.env.PORT, function () {
     console.log('Express started on http://localhost:' + 8080 + '; press Ctrl-C to terminate.');
 });
