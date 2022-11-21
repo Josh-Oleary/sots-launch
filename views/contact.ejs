@@ -1,23 +1,23 @@
 <%- include('partials/header') %> 
-    <section id="contact-hero">
-        <div id="contact-hero-background">
+    <section id="contact-hero-contact">
+        <div id="contact-hero-background-contact">
 <%- include('partials/navbar') %> 
     <div class="contact">
       <div class="page-cta">
         <h2>Get In Touch!</h2>
       </div>
-        <div class="page-container">
+        <div class="contact-page-container">
             <form  id='contact-form' action="/contact" method='POST' enctype="x-www-form-urlencoded">
-                <div class="contact-form-container row">
+                <div class="contact-form-container">
                     <div class="top-row">
-                        <input type="text" name='fullName' class="form-control" placeholder="Full Name" aria-label="First name" required>
+                        <input type="text" name='firstName' class="form-control" placeholder="First Name" aria-label="First name" required>
+                        <input type="text" name='lastName' class="form-control" placeholder="Last Name" aria-label="Last name" required>
                     </div>
-                    <div class="top-row">
+                    <div class="mid-row">
                         <input type="email" name='email' class="form-control" placeholder="Email Address" aria-label="Email Address" required>
                     </div>
                     <div id="contact-msg" class="input-group">
-                        <span class="input-group-text">Message</span>
-                        <input type="text" name='content' class='form-control' required>
+                        <input type="text" name='content' class='form-control' placeholder="Your message here..." required>
                     </div>
                     <div class="contactBtn"> 
                         <button id="submitBtn" type="submit" value='submit' class="btn btn-secondary btn-lg">Submit</button>

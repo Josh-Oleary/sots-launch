@@ -468,8 +468,9 @@ a:active {
 .page-cta {
 	text-align: center;
 	transform: translateY(4em);
-	color: white;
+	color: #0e232f;
 	border-radius: 10px;
+	/* margin-top: 1em; */
 }
 .page-cta h2 {
 	font-size: 50px;
@@ -484,6 +485,10 @@ form {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	margin-top: 3em;
+}
+.top-row {
+	flex-direction: row;
 }
 textarea {
 	height: 8em;
@@ -547,6 +552,31 @@ textarea {
 	transition: 250ms;
 	color: black;
 	font-weight: 700;
+}
+.top-row {
+	display: flex !important;
+	flex-direction: row;
+	justify-content: space-between;
+}
+#contact-hero-contact {
+	background-color: white;
+	height: 90vh;
+}
+.top-row input {
+	width: 48%;
+	margin: 0;
+	border-color: #0e232f;
+	height: 4em;
+}
+.mid-row input {
+	height: 4em;
+	margin: 1em 0;
+	border-color: #0e232f;
+}
+#contact-msg input{
+	border-color: #0e232f;
+	margin-bottom: 2em;
+	height: 10em;
 }
 .cta-btn {
 	background-color: #99d6cf;
@@ -654,9 +684,13 @@ a:active {
 }
 
 #report-spacer {
-	height: 5em;
+	/* height: 5em; */
 	background-color: #0e232f;
 	transform: translateY(-1em);
+}
+.footer-links {
+	color: white;
+	list-style-type: none;
 }
 .step {
 	width: 50vw;
@@ -720,6 +754,7 @@ p {
 	.location-header {
 		height: 1em;
 		margin-left: .75em !important;
+		margin-top: 1.5em;
 	}
 	.report-metadata {
 		align-items: flex-start !important;
@@ -735,6 +770,25 @@ p {
 	}
 	.avy-text {
 		font-size: .8em !important;
+		margin-top: 2em;
+		padding-right: .4em;
+	}
+	.step {
+		width: 80vw !important;
+	}
+	.step-block {
+		margin: 0;
+	}
+	#admin-hero-header {
+		margin-top: 5.5em;
+	}
+	#admin-hero p {
+		width: 90vw;
+		text-align: center;
+	}
+	.admin-container {
+		display: flex;
+		justify-content: center;
 		margin-top: 2em;
 	}
 	#av-canada-report {
@@ -898,6 +952,7 @@ p {
 	#footer {
 		flex-direction: column;
 		border-top: none;
+		padding-top: 7em;
 	}
 	.footer-text p {
 		font-size: 15px;
@@ -952,6 +1007,40 @@ p {
 		width: 19em; */
 		/* box-shadow: 0 0 5px; */
 	}
+	.contact-form-container {
+		display: flex;
+		flex-direction: column;
+		height: 25em;
+		margin-top: 0;
+	}
+	.contact-page-container, .contact-form-container {
+		background-color: white;
+	}
+	.contact-page-container {
+		height: 35em;
+	}
+	.top-row {
+		display: flex;
+		justify-content: space-between;
+	}
+	.top-row input {
+		width: 9em;
+		height: 3.5em;
+		border-color: #0e232f;
+	}
+	.mid-row input {
+		height: 3.5em;
+		border-color: #0e232f;
+	}
+	#contact-msg {
+		height: 10.5em;
+	}
+	#contact-hero-background {
+		height: 80vh;
+	}
+	#contact-msg input {
+		border-color: #0e232f;
+	}
 	.team-container {
 		margin-top: 2em;
 	}
@@ -967,7 +1056,7 @@ p {
 		transform: translateY(-2em);
 		margin-top: 0;
 	}
-	.contact-form-container {
+	/* .contact-form-container {
 		width: 90vw;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -984,7 +1073,7 @@ p {
 	#submitBtn {
 		transform: translateY(-4.9em);
 		height: 6.5em;
-	}
+	} */
 	#login-form-container {
 		transform: translateY(-5em);
 		margin-bottom: 1em;
@@ -994,11 +1083,18 @@ p {
 	}
 	#contact-hero,
 	#contact-hero-background {
-		height: 120vh !important;
+		height: 75vh !important;
 	}
 	.location-page-container {
 		display: flex;
 		flex-direction: column;
+	}
+	.page-cta h2 {
+		padding-top: 2em;
+		color:#0e232f;
+	}
+	.page-cta {
+		background-color: white;
 	}
 	.sponsor-img {
 		width: 5em !important;

@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse " id="navbarNavDropdown">
       <ul class="navbar-nav navLinks">
         <li class="nav-item dropdown">
-          <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             Reports
           </a>
@@ -30,19 +30,10 @@
             <!-- <li><a class="dropdown-item" href="#">Education</a></li>
               <li><a class="dropdown-item" href="#">Glossary</a></li>
               <li><a class="dropdown-item" href="#">Add to homescreen</a></li> -->
-            <li><a class="dropdown-item" href="/team">Our Team</a></li>
+            <!-- <li><a class="dropdown-item" href="/team">Our Team</a></li> -->
             <li><a class="dropdown-item" href="contact">Contact</a></li>
           </ul>
         </li>
-        <!-- <% if(!currentUser) { %> 
-          <li class="nav-item">
-            <a class="nav-link" href="login">Login</a>
-          </li>
-          <% } else { %>
-            <li class="nav-item">
-              <a class="nav-link" href="logout">Logout</a>
-            </li>
-          <% } %> -->
         <li class="nav-item">
           <a class="nav-link" id="donate-btn" aria-current="page"
             href="https://www.gofundme.com/f/state-of-the-snowpack?qid=76435860f221888b03ae488a637aa6ac">Donate</a>
@@ -158,5 +149,24 @@
   /* Close when someone clicks on the "x" symbol inside the overlay */
   function closeNav() {
     document.getElementById("myNav").style.width = "0%";
-  } 
+  }
+
+  let dropDown = document.querySelectorAll('.dropdown')
+  dropDown.forEach((d) => {
+    d.addEventListener('click', () => {
+      const url = new URL(window.location.href)
+      if (url.pathname === '/') {
+        d.children[1].classList.toggle('show')
+        console.log('RUNNING')
+        if (d.children[1].classList.contains('show')) {
+          console.log('false')
+          console.log(d.children[1].classList)
+          d.children[1].classList.add('show')
+        } else {
+          console.log('true')
+          d.children[1].classList.remove('show')
+        }
+      }
+    })
+  })
 </script>

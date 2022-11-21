@@ -16,7 +16,7 @@ module.exports.renderContact = (req,res) => {
 module.exports.sendEmail = (req, res) => {
   let mailDetails = {
       from: req.body.email,
-      to: process.env.EMAIL,
+      to: 'jdoleary91@gmail.com',
       subject: `New message from ${req.body.fullName}`,
       text: req.body.content
     };
