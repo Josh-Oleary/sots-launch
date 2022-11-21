@@ -107,6 +107,6 @@ app.use(mongoSanitize({ replaceWith: '_' }));
 
 
 
-app.listen(port, function () {
+app.listen(port, '0.0.0.0', function () {
     console.log('Express started on' + port+ 'press Ctrl-C to terminate.');
 });
