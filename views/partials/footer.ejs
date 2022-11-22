@@ -38,13 +38,13 @@
         <ul>
           <% if(!currentUser) { %> 
           <li class="">
-            <a class="footer-links" href="login">Login</a>
+            <a class="footer-links" href="/login">Login</a>
           </li>
           <li>
-            <a class="footer-links" href="admin">Admin Portal</a>
           </li>
           <% } else { %>
-            <li class="">
+            <li class="admin-footer-links">
+              <a class="footer-links" href="admin">Admin Portal</a>
               <a class="footer-links" href="logout">Logout</a>
             </li>
           <% } %>

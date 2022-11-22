@@ -20,6 +20,10 @@ const ReportSchema = new Schema({
   		type: Schema.Types.ObjectId,
   		ref: 'User'
 	},
+	safety: {
+		type: String,
+		required: true
+	},
 	weatherSummary: {
 		type: String,
 		required: false

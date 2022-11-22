@@ -1,21 +1,46 @@
 <%- include('../partials/header') %>
-<section id="admin-hero">
-    <div id="admin-background">
+<section id="admin-hero" class="admin-report-bg">
+    <div id="admin-background" class="admin-report-overlay">
         <%- include('../partials/navbar') %>
-        <form enctype="multipart/form-data" action="/admin/addReport" method="POST">
-            <label for="date">Today's Date</label>
-            <input type="date" id="date" name="date">
-            <label for="location">Location</label>
-            <input type="text" id="location" name="location">
-            <label for="video">Choose File</label>
-            <input type="file" id="video" name="video">
-            <label for="weatherSummary">Weather Summary</label>
-            <input type="text" id="weatherSummary" name="weatherSummary">
-            <label for="snowpackSummary">Weather Summary</label>
-            <input type="text" id="snowpackSummary" name="snowpackSummary">
-            <label for="avalancheSummary">Avalanche Summary</label>
-            <input type="text" id="avalancheSummary" name="avalancheSummary">
-            <button>Submit Report</button>
+        <h2 id="add-report-header">Add Report</h2>
+        <form id="add-report-form" enctype="multipart/form-data" action="/admin/addReport" method="POST">
+            <div id="add-report-top">
+                <div>
+                    <label for="date">Today's Date</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <div>
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location">
+                </div>
+                <div>
+                    <label for="safety">Safety Rating</label>
+                    <select type="text" id="safety" name="safety">
+                        <option value="safe">Safe</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="dangerous">Dangerous</option>
+                        <option value="severe">Severe</option>
+                    </select>
+                </div>
+                <div>
+                    <label id="video-label" for="video">Upload Video</label>
+                    <input type="file" id="video" name="video">
+                    <!-- <input type="submit"> -->
+                </div>
+            </div>
+            <div class="sumarry-containers">
+                <label for="weatherSummary">Weather Summary</label>
+                <input class="report-sumarries" type="text" id="weatherSummary" name="weatherSummary">
+            </div>
+            <div class="sumarry-containers">
+                <label for="snowpackSummary">Weather Summary</label>
+                <input class="report-sumarries" type="text" id="snowpackSummary" name="snowpackSummary">
+            </div>
+            <div class="sumarry-containers">
+                <label for="avalancheSummary">Avalanche Summary</label>
+                <input class="report-sumarries" type="text" id="avalancheSummary" name="avalancheSummary">
+            </div>
+            <button id="add-report-btn">Submit Report</button>
         </form>
     </div>
 </section>
