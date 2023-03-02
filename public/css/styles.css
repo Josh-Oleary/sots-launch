@@ -13,6 +13,16 @@ body {
 	background-color: #0e232f;
 	color: white;
 }
+
+#error-container {
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	color: #0e232f;
+}
 /* background image styles */
 #hero {
 	background: url("../images/TouringGlory.jpg") no-repeat center center;

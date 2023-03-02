@@ -36,7 +36,9 @@ module.exports.renderNelson = (req, res) => {
           console.log(err)
       } else {
         console.log(nelsonReports)
-          res.render('locations/nelson', {reports: nelsonReports.reverse()})
+        nelsonReports.length > 0
+          ? res.render('locations/nelson', {reports: nelsonReports.reverse()})
+          : res.render('404')
       }
   })
 }
@@ -46,7 +48,9 @@ module.exports.renderRosland = (req, res) => {
       if(err){
           console.log(err)
       } else {
-          res.render('locations/nelson', {reports: roslandReports.reverse()})
+        roslandReports.length > 0
+          ? res.render('locations/nelson', {reports: roslandReports.reverse()})
+          : res.render('404')
       }
   })
 }
