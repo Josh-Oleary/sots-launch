@@ -15,10 +15,11 @@ module.exports.renderAddReport = (req, res) => {
 module.exports.addReport =  async (req,res) => {
   console.log('REQ USER: ', req.user)
   try {
-      const { date, location, weatherSummary, snowpackSummary, avalancheSummary } = req.body;
-      const report = new Report({ date, location, weatherSummary, snowpackSummary, avalancheSummary });
+      const { date, safety, location, weatherSummary, snowpackSummary, avalancheSummary } = req.body;
+      const report = new Report({ date, location, safety, weatherSummary, snowpackSummary, avalancheSummary });
       report.video = req.files.map(f => ({url: f.path, filename: f.filename}));
       console.log(req.user)
+      console.log('REPORT: ', report)
       // report.author = req.user._id;
       console.log(report);
       await report.save((err, doc) => {
