@@ -69,10 +69,10 @@ const app = express();
 app.use(express.static((path.join(__dirname + '/public'))));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
-app.use('/', createProxyMiddleware({
-    target: 'http://localhost:3000',
-    changeOrigin: true
-}))
+// app.use('/', createProxyMiddleware({
+//     target: 'http://localhost:3000',
+//     changeOrigin: true
+// }))
 
 //setting view engine
 app.set('view engine', 'ejs');
@@ -112,6 +112,6 @@ app.use(mongoSanitize({ replaceWith: '_' }));
 
 
 
-app.listen(80, '0.0.0.0', function () {
+app.listen(port, '0.0.0.0', function () {
     console.log(`Listening on port: ${port}`);
 });
