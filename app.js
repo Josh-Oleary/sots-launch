@@ -14,6 +14,7 @@ const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const MongoStore = require('connect-mongo');
 const nodemailer = require('nodemailer');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 //"mongodb+srv://sotsAdmin:<password>@cluster0.b8xjv.mongodb.net/?retryWrites=true&w=majority"
 //"mongodb+srv://sotsAdmin:stateofthesnowpack@cluster0.b8xjv.mongodb.net/?retryWrites=true&w=majority"
@@ -23,7 +24,7 @@ const adminRoutes = require('./routes/admin')
 const userRoutes = require('./routes/users');
 const publicRoutes = require('./routes/sots')
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3000;
 // const mongoURI = process.env.MONGOURI || 'mongodb://127.0.0.1:27017/sots';
 const mongoURI = process.env.MONGO_URL || "mongodb+srv://sotsAdmin:stateofthesnowpack@cluster0.b8xjv.mongodb.net/?retryWrites=true&w=majority";
 const secret = process.env.SECRET || 'secret';
@@ -68,6 +69,10 @@ const app = express();
 app.use(express.static((path.join(__dirname + '/public'))));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+app.use('/', createProxyMiddleware({
+    target: 'http://localhost:3000',
+    changeOrigin: true
+}))
 
 //setting view engine
 app.set('view engine', 'ejs');
@@ -107,6 +112,6 @@ app.use(mongoSanitize({ replaceWith: '_' }));
 
 
 
-app.listen(port, '0.0.0.0', function () {
+app.listen(80, '0.0.0.0', function () {
     console.log(`Listening on port: ${port}`);
 });
