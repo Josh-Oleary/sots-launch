@@ -35,7 +35,6 @@ module.exports.renderNelson = (req, res) => {
       if(err){
           console.log(err)
       } else {
-        console.log(nelsonReports)
         nelsonReports.length > 0
           ? res.render('locations/nelson', {reports: nelsonReports.reverse(), safety: nelsonReports.reverse()[0].safety})
           : res.render('404')

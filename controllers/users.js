@@ -37,7 +37,6 @@ module.exports.renderResetPassword = (req, res) => {
 module.exports.loginUser = async (req, res) => {
   try {
       const user = await User.findOne({ email: req.body.email })
-      console.log('User: ', user)
       if(user){
           const cmp = await bcrypt.compare(req.body.password, user.password);
           if(cmp){
@@ -55,7 +54,6 @@ module.exports.loginUser = async (req, res) => {
 
 module.exports.logout = (req, res) => {
   req.logout();
-  console.log('logged out');
   req.flash('success', 'Goodbye!');
   res.redirect('/');
 };

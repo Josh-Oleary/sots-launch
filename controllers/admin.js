@@ -13,18 +13,13 @@ module.exports.renderAddReport = (req, res) => {
 };
 
 module.exports.addReport =  async (req,res) => {
-  console.log('REQ USER: ', req.user)
   try {
       const { date, safety, location, weatherSummary, snowpackSummary, avalancheSummary } = req.body;
       const report = new Report({ date, location, safety, weatherSummary, snowpackSummary, avalancheSummary });
       report.video = req.files.map(f => ({url: f.path, filename: f.filename}));
-      console.log(req.user)
-      console.log('REPORT: ', report)
-      // report.author = req.user._id;
-      console.log(report);
+      report.author = req.user._id;
       await report.save((err, doc) => {
           if(err) console.log(err);
-          console.log(doc);
       })
       res.redirect('/');
   } catch (e) {
@@ -39,13 +34,11 @@ module.exports.renderOwner = (req, res) => {
 
 module.exports.makeAdmin = async (req, res) => {
   try{
-  const email = req.body.makeAdminEmail;
-  console.log(email);
-  const filter = { email: email }
-  const update = { isAdmin: true };
-  let updatedUser = await User.findOneAndUpdate(filter, update, { new: true});
-  console.log(updatedUser);
-  res.send(`Successfuly made ${updatedUser.name} and admin`)
+    const email = req.body.makeAdminEmail;
+    const filter = { email: email }
+    const update = { isAdmin: true };
+    let updatedUser = await User.findOneAndUpdate(filter, update, { new: true});
+    res.send(`Successfuly made ${updatedUser.name} and admin`)
   } catch (e) {
       console.log(e);
   }
@@ -53,12 +46,11 @@ module.exports.makeAdmin = async (req, res) => {
 
 module.exports.removeAdmin = async (req, res) => {
   try {
-  const email = req.body.deleteAdminEmail;
-  const filter = { email: email }
-  const update = { isAdmin: false };
-  let updatedUser = await User.findOneAndUpdate(filter, update, { new: true});
-  console.log(updatedUser);
-  res.send(`${updatedUser.name} is no longer an Admin`);
+    const email = req.body.deleteAdminEmail;
+    const filter = { email: email }
+    const update = { isAdmin: false };
+    let updatedUser = await User.findOneAndUpdate(filter, update, { new: true});
+    res.send(`${updatedUser.name} is no longer an Admin`);
   } catch (e) {
       console.log(e);
   }

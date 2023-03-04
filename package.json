@@ -4,7 +4,7 @@
   "description": "SOTS application with CRUD functionality using RESTful routes",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js -e ejs js css",
+    "dev": "nodemon app.js -e ejs,js,css",
     "start": "node app.js"
   },
   "repository": {

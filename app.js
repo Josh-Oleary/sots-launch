@@ -58,9 +58,9 @@ const sessionConfig = {
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, "connection error:"));
-db.once('open', () => {
-    console.log('Database connected')
-})
+// db.once('open', () => {
+//     console.log('Database connected')
+// })
 
 const app = express();
 
@@ -112,6 +112,4 @@ app.use(mongoSanitize({ replaceWith: '_' }));
 
 
 
-app.listen(port, '0.0.0.0', function () {
-    console.log(`Listening on port: ${port}`);
-});
+app.listen(port, '0.0.0.0');
