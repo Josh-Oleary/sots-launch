@@ -1,1 +1,1 @@
-worker: node /sots/app.js
+web: npm start
