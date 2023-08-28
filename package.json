@@ -5,10 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
-    "start": "node /sots/app.js"
-  },
-  "engines": {
-    "node": "15.14.0"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

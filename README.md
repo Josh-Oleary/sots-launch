@@ -1,25 +1,10 @@
-# State Of The Snowpack
+# stateofsnowpack
+State of the Snowpack
 
-This web application is for the State of the Snowpack non-profit orginization. It is a fairly basic CRUD application which allows admins to upload reports consisting of text and a video file.
+This website contains a CRUD application using a custom API. It was created using CSS, JavaScript, EJS, Node, Mongoose, Mongo and Express.
 
-# Install
+NPM RUN DEV
 
-Clone repository
+This command will spin up the server and allow access to the site on https://localhost:3000
 
-Run `npm install`
-
-# View Locally
-
-`cd sots`
-
-`nodemon -e ejs,js,css`
-
-# Development Workflow
-
-The master branch is protected and will require owner approval to merge pull requests
-
-This project is being worked on constantly by multiple developers, please remember to consistently pull from master
-
-Make a local branch off of master, when you're ready for changes to be viewed, push your branch to staging
-
-Once the changes have been approved, make a PR into master
+The application is currently hooked up to a development server and DB and is not yet functional.
