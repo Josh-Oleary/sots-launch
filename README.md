@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # State Of The Snowpack
 
 This web application is for the State of the Snowpack non-profit orginization. It is a fairly basic CRUD application which allows admins to upload reports consisting of text and a video file.

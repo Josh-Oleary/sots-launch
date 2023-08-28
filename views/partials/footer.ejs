@@ -1,0 +1,102 @@
+<footer id="footer">
+  <div id="footer-right">
+    <div id="footer-nav">
+      <div class="footer-nav-tile">
+        <h5>Reports</h5>
+        <ul>
+          <li><a class='footer-links' href="nelson">Nelson</a></li>
+          <li><a class='footer-links' href="rosland">Rosland</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-tile">
+        <h5>About</h5>
+        <ul>
+          <li><a class='footer-links' href="team">Our Team</a></li>
+          <li><a class='footer-links' href="team">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-tile">
+        <h5>Resources</h5>
+        <ul>
+          <!-- <li>Forecasts</li>
+          <li>Glossary</li> -->
+          <li><a class='footer-links' href="Contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-tile">
+        <h5><a class='footer-links' href="https://www.gofundme.com/f/state-of-the-snowpack?qid=76435860f221888b03ae488a637aa6ac">Donate</a></h5>
+      </div>
+      <div class="footer-nav-tile">
+        <h5>Admin</h5>
+        <ul>
+          <% if(!currentUser) { %> 
+          <li class="">
+            <a class="footer-links" href="/login">Login</a>
+          </li>
+          <li>
+          </li>
+          <% } else { %>
+            <li class="admin-footer-links">
+              <a class="footer-links" href="admin">Admin Portal</a>
+              <a class="footer-links" href="logout">Logout</a>
+            </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  <div class="footer-text">
+    <div id="footer-t-left">
+      <p>“The information I, Morgan Dinsdale, CAA Active Member & CSGA Level 1 Guide, alongside my team, all CAA Active or
+        Professional Members, present are our own observations to the best of our abilities. These snowpack summaries do
+        not replace actually avalanche training. What you do with the information we present is your responsibility, use
+        it responsibly.”</p>
+      <p id="footer-bottom">Web Design by Katie Hall.</p>
+    </div>
+    <div id="footer-links">
+      <img src="/images/SOS-Full-Color-White 2.png" alt="">
+      <div id="footer-socials">
+        <a href="https://www.instagram.com/stateofthesnowpack/?hl=en"><img class="hero-social-icons"
+            src="/images/dashicons-instagram.png" alt=""></a>
+        <a href="https://www.facebook.com/StateOfTheSnowpack"><img class="hero-social-icons"
+            src="/images/dashicons-facebook.png" alt=""></a>
+        <a href="https://www.youtube.com/channel/UCt8QT6RARHCjFCZZ-SNkz5Q"><img id="youtube-icon"
+            class="hero-social-icons" src="/images/dashicons-youtube.png" alt=""></a>
+        <a href="https://www.linkedin.com/company/state-of-the-snowpack"><img class="hero-social-icons"
+            src="/images/dashicons-linkedin.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+  integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+  integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  $(document).ready(function () {
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin:30,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 4
+        }
+      }
+    });
+  });
+</script>
+</body>
+
+</html>

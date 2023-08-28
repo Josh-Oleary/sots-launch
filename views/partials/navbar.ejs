@@ -1,0 +1,170 @@
+<nav class="navbar navbar-expand-lg bg-transparent navbar-light">
+  <div class="container-fluid">
+    <a href="/"><img id="navLogo" src="/images/SOS-Full-Color-White 2.png" alt=""></a>
+    <button class="navbar-toggler text-dark" type="button" aria-controls="navbarNavDropdown" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span onclick="openNav()" class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+      <ul class="navbar-nav navLinks">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Reports
+          </a>
+          <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="/nelson">Nelson</a></li>
+            <li><a class="dropdown-item" href="/rosland">Rossland</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/team">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Resources
+          </a>
+          <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+            <% if(currentUser) { %> 
+            <li><a class="dropdown-item" href="admin">Admin Portal</a></li>
+            <% } %>
+            <!-- <li><a class="dropdown-item" href="#">Education</a></li>
+              <li><a class="dropdown-item" href="#">Glossary</a></li>
+              <li><a class="dropdown-item" href="#">Add to homescreen</a></li> -->
+            <!-- <li><a class="dropdown-item" href="/team">Our Team</a></li> -->
+            <li><a class="dropdown-item" href="contact">Contact</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="donate-btn" aria-current="page"
+            href="https://www.gofundme.com/f/state-of-the-snowpack?qid=76435860f221888b03ae488a637aa6ac">Donate</a>
+        </li>
+
+      </ul>
+    </div>
+    <div id="myNav" class="overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <div class="d-flex justify-content-between">
+        <img id="navLogo" class="mt-5 mx-4" src="/images/SOS-Full-Color-White 2.png" alt="">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+      </div>
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <a href="#">Reports</a>
+        <div class="my-3"><a class="mobile-menu-links" href="/nelson">Nelson</a></div>
+        <div class="my-3"><a class="mobile-menu-links" href="/rosland">Rossland</a></div>
+        <a href="/team">About</a>
+        <a href="#">Resources</a>
+        <!-- <div class="my-3">Forecasts</div>
+        <div class="my-3">Glossary</div> -->
+        <div class="my-3"><a class="mobile-menu-links" href="/admin">Admin</a></div>
+        <div class="my-3"><a class="mobile-menu-links" href="/contact">Contact</a></div>
+        <a href="https://www.gofundme.com/f/state-of-the-snowpack?qid=76435860f221888b03ae488a637aa6ac">Donate</a>
+      </div>
+
+    </div>
+  </div>
+</nav>
+<style>
+  .overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: #12212B;
+    /* Black fallback color */
+    background-color: #12212B;
+    /* Black w/opacity */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 10%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 30px;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #F7941D;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  /* .overlay a:hover,
+  .overlay a:focus {
+    color: #f1f1f1;
+  } */
+
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 60px;
+    color: #fff;
+  }
+
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px
+    }
+
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+</style>
+<script>
+  /* Open when someone clicks on the span element */
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+
+  let dropDown = document.querySelectorAll('.dropdown')
+  dropDown.forEach((d) => {
+    d.addEventListener('click', () => {
+      const url = new URL(window.location.href)
+      if (url.pathname === '/') {
+        d.children[1].classList.toggle('show')
+        if (d.children[1].classList.contains('show')) {
+          d.children[1].classList.add('show')
+        } else {
+          d.children[1].classList.remove('show')
+        }
+      }
+    })
+  })
+</script>
