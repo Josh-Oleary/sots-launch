@@ -26,7 +26,7 @@ const publicRoutes = require('./routes/sots')
 
 const port = process.env.PORT || 3000;
 // const mongoURI = process.env.MONGOURI || 'mongodb://127.0.0.1:27017/sots';
-const mongoURI = process.env.MONGO_URL
+const mongoURI = "mongodb+srv://sotsAdmin:stateofthesnowpack@cluster0.b8xjv.mongodb.net/?retryWrites=true&w=majority"
 const secret = process.env.SECRET || 'secret';
 
 mongoose.connect( mongoURI, {
@@ -58,9 +58,9 @@ const sessionConfig = {
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, "connection error:"));
-// db.once('open', () => {
-//     console.log('Database connected')
-// })
+db.once('open', () => {
+    console.log('Database connected')
+})
 
 const app = express();
 

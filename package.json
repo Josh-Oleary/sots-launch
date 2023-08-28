@@ -4,16 +4,8 @@
   "description": "SOTS application with CRUD functionality using RESTful routes",
   "main": "app.js",
   "scripts": {
-<<<<<<< HEAD
-    "dev": "nodemon app.js",
-    "start": "node /sots/app.js"
-  },
-  "engines": {
-    "node": "15.14.0"
-=======
     "dev": "nodemon app.js -e ejs,js,css",
     "start": "node app.js"
->>>>>>> 258d80e87ab810f8f6ff947bcd10656454f1c0c6
   },
   "repository": {
     "type": "git",
@@ -37,10 +29,7 @@
     "express-mongo-sanitize": "^2.1.0",
     "express-session": "^1.17.2",
     "helmet": "^4.6.0",
-<<<<<<< HEAD
-=======
     "http-proxy-middleware": "^2.0.6",
->>>>>>> 258d80e87ab810f8f6ff947bcd10656454f1c0c6
     "method-override": "^3.0.0",
     "mongodb": "^4.2.0",
     "mongoose": "^5.13.2",
